@@ -6,7 +6,7 @@
 |**Data**|**Versão**|**Descrição**|**Autor**|
 | :-: | :-: | :-: | :-: |
 |27/09/2023|1\.0|<Primeira versão da descrição> |<Giovanna, Leonardo, Matheus e Rafael> |
-|08/10/2023|1\.1|<Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais.>|<Rafael> |
+|08/10/2023|1\.1|<Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais.>|< Rafael > |
 
 1. **Projeto**: *VUMBORA?*
 2. **Descrição do problema:**
@@ -21,13 +21,11 @@
 
 |**Nome**|**Descrição**|**Responsabilidade**|
 | - | - | - |
-|Usuário comum.|<p>**Usuário comum:**  Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. </p><p></p>|<p><p>**Usuário comum**: Busca os eventos, cadastra seus eventos e avalia eventos.</p><p></p>|
+|Usuário comum.|<p>**Usuário comum:**  Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. </p><p></p>|<p><p>**Usuário comum**: Busca os eventos, cadastra seus eventos e avalia eventos de outros usuários.</p><p></p>|
 
 4. **Descrição do ambiente dos usuários:**
 
-O ambiente para os usuários comuns, que são as pessoas que usarão a plataforma  para visualizar os eventos, seria a filtragem para a procura de eventos por localização, valor, lugar ou data, a visualização da descrição desses eventos e a possibilidade de acessar links pela plataforma para a possível compra do ingresso para o evento.
-
-O ambiente para os produtores culturais seria fazer inserções de eventos adicionando as informações pertinentes relacionadas a eles como descrição, data, valor, onde comprar ingressos e localização. Essa ambientação, assim como todas as funções do sistema, é dependente da internet para o funcionamento.
+A plataforma deve funcionar todas as horas do dia e todos os dias, além disso, deve ser possível de acessar em qualquer lugar com acesso a internet e nos diferentes tipos de dispositivos.
 
 
 5. **Principais necessidades dos usuários:**
@@ -38,7 +36,7 @@ Ademais, a divulgação dos eventos não é eficaz o suficiente para atingir uma
 
 6. **Alternativas concorrentes:**
 
-O Sympla, Outgo, Gandaya e Ingresse seriam alternativas concorrentes que disponibilizam ações como as de: Filtrar eventos por localização, o Sympla faz a separação de eventos por temas de eventos, descrever detalhes dos eventos e também a opção de fazer com que os produtores de eventos possam adicionar seu evento na plataforma.
+O Sympla, Outgo, Gandaya e Ingresse seriam alternativas concorrentes que disponibilizam ações como as de: Filtrar eventos por localização, o Sympla faz a separação de eventos por temas de eventos, descrever detalhes dos eventos e também a opção de fazer com que usuários comuns possam cadastrar os seus eventos na plataforma, ensinando como fazer e oferecendo planos pagos que auxiliam na criação do evento e até mesmo pode se realizar o evento pela plataforma(no caso dele ser online). Entretanto, todas essas alternativas estão focadas na venda de ingressos, e assim, apenas estão inscritos na plataforma o evento que está sendo vendido por ela.
 
 7. **Visão geral do produto:**
 
@@ -52,14 +50,15 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 |**Código**|**Nome**|**Descrição**|
 | :- | :- | :- |
 |*F01*|*Cadastro de usuários comuns*|*Realização de criação de perfil englobando alguns dados básicos dos usuários.*|
-|*F02*|*Pesquisa dos eventos* |*Os usuários irão fazer pesquisas com intenção de encontrar eventos de acordo com sua preferência.*|
-|*F03*|*Filtragem dos eventos*|*Os usuários fariam uma filtragem por tipo, local, valor ou data do evento.*|
-|*F04*|*Inscrição dos eventos*|*Os produtores irão adicionar os eventos na plataforma com a descrição referente ao evento.*|
-|*F05*|*Gerenciar a descrição dos eventos*|*Seria editar as informações dos eventos fazendo a atualização ou exclusão do evento, caso necessário.* |
-|*F06*|*Gerenciar perfis*|*Realização de consulta e atualização de dados do perfil do usuário e/ou produtor.*|
-|*F07*|*\*Classificar usuários que já produziram eventos*|*\*Os usuários poderão  avaliar os produtores de eventos para passar mais credibilidade.*|
-|*F08*|*Filtragem dos usuários que já produziram eventos*|*Os usuários fariam uma busca dos produtores com a melhor avaliação no sistema.*|
-|*F09*|*Favoritar um evento* |*O usuário poderá salvar um evento para ficar salvo para ele e/ou outros usuários que ele irá comparecer.*|
+|*F02*|*Inscrição dos eventos* |*Os produtores irão adicionar os eventos na plataforma com a descrição referente ao evento.*|
+|*F03*|*Gerenciar a descrição dos eventos*|*Seria editar as informações dos eventos fazendo a atualização ou exclusão do evento, caso necessário.*|
+|*F04*|*Gerenciar perfis*|*Realização de consulta e atualização de dados do perfil do usuário.*|
+|*F05*|*Filtragem dos eventos*|*Os usuários fariam uma filtragem por tipo, local, valor ou data do evento.* |
+|*F06*|*Pesquisa dos eventos *|*Os usuários irão fazer pesquisas com intenção de encontrar eventos de acordo com sua preferência.*|
+|*F07*|*Favoritar um evento *|*O usuário poderá favoritar um evento para ficar salvo para ele e/ou outros usuários que ele irá comparecer.*|
+|*F08*|*Classificar usuários que já produziram eventos.*|*Os usuários poderão  avaliar os usuários que já produziram eventos para passar mais credibilidade.
+*|
+|*F09*|*Filtragem dos usuários que já produziram eventos* |*Os usuários fariam uma busca dos produtores com a melhor avaliação no sistema.*|
 |*F10*|*Compartilhar evento* |*O usuário copiará o link do evento para compartilhamento.*|
 
 
@@ -70,7 +69,7 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 | :- | :- | :- | :-: | :-: |
 |*RNF01*|*Design Responsivo*|*O sistema deve se adaptar a diferentes tamanhos de tela.*|*Usabilidade*|*Obrigatório*|
 |*RNF02*|*Facilidade de uso*|*O sistema deve ser intuitivo e fácil de utilizar*|*Usabilidade*|*Obrigatório*|
-|*RNF03*|*Troca de dados*|*O sistema deve se utilizar de um serviço de mapas como o google maps para informar o local dos eventos.*|*Interoperabilidade*|*Obrigatório*|
+
 
 
 
