@@ -4,6 +4,7 @@
 | Versão | Autor | Data |
 |--------|-------|------|
 |  1.0  | Fellipe Aleixo | 11 de abril de 2023 |
+|  1.1  | Rafael Silveira | 07 de Outubro de 2023 |
 
 # Projeto de Desenvolvimento de Sistemas Web
 
@@ -18,7 +19,7 @@
 
 1. Antes de iniciar os trabalhos, o projeto precisa ser clonado na máquina local. Para tanto é necessário que o processo de configuração das chaves SSH tenha ocorrido anteriormente;
 ~~~shell
-$ git clone https://github.com/tads-cnat/exemplo.git
+$ git clone https://github.com/tads-cnat/vumbora
 ~~~
 
 ## C. Fluxo ao Ser Atribuído em Tarefas
