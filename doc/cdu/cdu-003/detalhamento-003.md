@@ -9,7 +9,7 @@
 ## Fluxo Principal
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
-| 1 - O usuário, na homepage, clica na opção Criar Evento | 2 - Sistema abre uma página com formulário para o preenchimento das informações sobre o evento. | 
+| 1 - O usuário, na homepage, clica na opção Criar Evento | 2 - Sistema abre uma página com formulário para o preenchimento das informações sobre o evento, formulário deve requisitar nome, local, data, se o evento é pago e qual o valor da entrada, deve informar o tipo de evento(Show, Teatro, Exposição, Gastronomia, Festa) e descrição.   | 
 | 3 - Usuário preenche as informações com os dados que são pedidos previamente no formulário e clica em avançar. | 4 Sistema verifica se todos os campos obrigatórios foram preenchidos. |
 | 5 - Usuário clica na opção publicar evento. | 6 - Sistema publica o evento com sucesso. |
 
