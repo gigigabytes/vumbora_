@@ -2,7 +2,7 @@
 
 ## 1. Diagrama de Casos de Uso
 
-(Vumbora UseCase Diagram.asta)
+![Diagrama de Casos de Uso](Vumbora UseCase Diagram.png)
 
 ## 2. Listagem dos detalhamentos dos casos de uso
 
