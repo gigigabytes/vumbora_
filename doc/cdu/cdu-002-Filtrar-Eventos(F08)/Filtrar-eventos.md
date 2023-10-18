@@ -1,50 +1,27 @@
-﻿
-**Vumbora?** 
+﻿# CDU003. Pesquisar Eventos
 
-**Especificação de Caso de Uso**
+- **Ator principal**: Usuário, público geral, Agência
+- **Atores secundários**: ...	 
+- **Resumo**: *O sistema precisa ser capaz de filtrar os eventos a partir de opções pré-estabelecidas nos critérios de valor, gênero e data. O sistema deve oferecer as seguintes opções pré determinadas dentro dos critérios, valor: Gratuito, até 10 reais, até 30 reais, até 50 reais e acima de 50. Data: Hoje, essa semana, esse mês, próximo mês. Gênero: Show, bairro, gastronomia, teatro, festas, exposições. Além disso, deve oferecer a possibilidade de pesquisar por texto eventos usando sua descrição, local e/ou nome.* 
+- **Pré-condição**: Sem precondições
+- **Pós-Condição**: Sem pós-condição
 
-**Filtragem de Eventos**
+## Fluxo Principal
+| Ações do ator | Ações do sistema |
+| :-----------------: | :-----------------: | 
+| 1 - Usuário escolhe a opção de filtrar os eventos por gênero, valor ou data. | 2 -  Sistema abre página de resultados com o tipo de evento escolhido e oferece a possibilidade de filtrar também com os dois outros critérios. | 
+| 3 - Usuário escolhe adicionar ou não mais critérios na filtragem e confirma a opção caso decida adicionar. | 4 - Sistema retorna os resultados pertinentes. |
+| 5 - Usuário escolhe um evento. | 6 - Sistema abre a página de descrição do evento escolhido. |
 
-**Histórico da Revisão**
+## Fluxo Alternativo I 
+| Ações do ator | Ações do sistema |
+| :-----------------: |:-----------------: | 
+| |4.1 - Sistema informa que não existem eventos condizentes com os critérios escolhidos e oferece a opção de voltar para a página anterior. |  
+| 5.1 - Usuário escolhe voltar para a página anterior e escolhe novos parâmetros.| 6.1 - Sistema retorna para o passo 4 do fluxo básico. |
 
-|**Data**|**Versão**|**Descrição**|**Autor**|
-| :-: | :- | -: | :-: |
-|08/10/2023|1\.0|< Primeiro plano >|< Rafael Silveira >|
-|dd/mm/aaaa|1\.1|<breve descrição da revisão>|<autores da revisão>|
-
-1. # **Resumo**
-
-*O sistema precisa ser capaz de filtrar os eventos a partir de opções pré-estabelecidas nos critérios de valor, gênero e data. O sistema deve oferecer as seguintes opções pré determinadas dentro dos critérios, valor: Gratuito, até 10 reais, até 30 reais, até 50 reais e acima de 50. Data: Hoje, essa semana, esse mês, próximo mês. Gênero: Show, bairro, gastronomia, teatro, festas, exposições.* 
-
-2. # **Atores**
-**	Usuário do site, público geral e Agência.
-
-3. # **Precondições**
-
-*Sem precondições.*
-
-4. # **Pós-condições**
-
-`	`*Sem pós-condição.*
-
-5. # **Fluxos de evento**
-
-**5.1 Fluxo básico**
-
-- *[IN] Usuário escolhe a opção de filtrar os eventos por gênero, valor ou data.*
-- *[OUT] Sistema abre página de resultados com o tipo de evento escolhido e oferece a possibilidade de filtrar também com os dois outros critérios.*
-- *[IN] Usuário escolhe adicionar ou não mais critérios na filtragem e confirma a opção caso decida adicionar.*
-- *[OUT] Sistema retorna os resultados pertinentes.*
-- *[IN] Usuário escolhe um evento.*
-- *[OUT] Sistema abre a página de descrição do evento escolhido.*
-
-# **5.2 Fluxo alternativo 1**
-
-*4. [OUT] Sistema informa que não existem eventos condizentes com os critérios escolhidos e oferece a opção de voltar para a página anterior.*
-
-*5. [IN] Usuário escolhe voltar para a página anterior e escolhe novos parâmetros.* 
-
-*6.[OUT] Sistema retorna para o passo 4 do fluxo básico.* 
-
+## Fluxo Alternativo II 
+| Ações do ator | Ações do sistema |
+| :-----------------: | :-----------------: | 
+| 1.2 - Ator escreve palavras chaves relacionadas com o que procura. |2.2 - Sistema procura coincidências das palavras digitadas com nome, local, descrição e gênero dos eventos cadastrados na plataforma e retorna uma lista dos eventos que apresentam coincidências, ordenando pelo número de coincidências que não devem considerar letras maiúsculas como diferente de minúsculas e nem os acentos. Sistema também oferece a possibilidade de filtrar a busca por gênero, valor ou data. Fluxo retorna para o fluxo principal no passo 3. |
 
 

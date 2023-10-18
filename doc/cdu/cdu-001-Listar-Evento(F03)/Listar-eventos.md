@@ -1,39 +1,14 @@
-﻿**Vumbora?** 
+﻿# CDU003. Listar Eventos
 
-**Especificação de Caso de Uso**
+- **Ator principal**: Usuário, público geral, Agência
+- **Atores secundários**: ...	 
+- **Resumo**: O sistema deve listar os eventos marcados para acontecer naquela semana. 
+- **Pré-condição**: Sem precondições
+- **Pós-Condição**: Sem pós-condição
 
-**Listar Eventos**
-
-**Histórico da Revisão**
-
-|**Data**|**Versão**|**Descrição**|**Autor**|
-| :-: | :- | -: | :-: |
-|15/10/2023|1\.0|< Primeiro plano >|< Rafael Silveira >|
-|dd/mm/aaaa|1\.1|<breve descrição da revisão>|<autores da revisão>|
-
-1. # **Resumo**
-
-*O sistema deve listar todos os eventos cadastrados.*
-
-2. # **Atores**
-**	Usuário do site, público geral.
-
-3. # **Precondições**
-
-*Sem precondições.*
-
-4. # **Pós-condições**
-
-`	`*Sem pós-condição.*
-
-5. # **Fluxos de evento**
-
-**5.1 Fluxo básico**
-
-- *[IN] Usuário escolhe a opção de listar eventos.*
-- *[OUT] Sistema exibe uma lista de eventos disponíveis incluindo detalhes como nome, data, local, descrição e valor. Ordenados por data ou valor de acordo com a opção escolhida, por padrão deve ser utilizado a data..* 
-- *[IN] Usuário pode navegar pela lista de eventos.*
-- *[OUT] Sistema retorna os resultados pertinentes.*
-- *[IN] Usuário escolhe um evento.*
-- *[OUT] Sistema abre a página de descrição do evento escolhido.*
-
+## Fluxo Principal
+| Ações do ator | Ações do sistema |
+| :-----------------: | :-----------------: | 
+| 1 - Usuário escolhe a opção de listar eventos. | 2 -  Sistema exibe uma lista de eventos disponíveis incluindo detalhes como nome, data, local, descrição e valor. Ordenados por data ou valor de acordo com a opção escolhida, por padrão deve ser utilizado a data. | 
+| 3 - Usuário pode navegar pela lista de eventos. | 4 - Sistema retorna os resultados pertinentes. |
+| 5 - Usuário escolhe um evento. | 6 - Sistema abre a página de descrição do evento escolhido. |
