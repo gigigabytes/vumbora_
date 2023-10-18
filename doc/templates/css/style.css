@@ -1,9 +1,23 @@
 body {
-  font-family: "poppins", sans-serif;
+  font-family: "poppins",
+ sans-serif;
   color: #101010;
   background-color: #ffffff;
 }
-
+.teventos {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: uppercase;
+}
 .layout_padding {
   padding-top: 120px;
   padding-bottom: 120px;
