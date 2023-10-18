@@ -9,25 +9,25 @@
 
 |**Data**|**Versão**|**Descrição**|**Autor**|
 | :-: | :- | -: | :-: |
-|08/10/2023|1\.0|<Primeiro plano>|<Rafael Silveira>|
+|08/10/2023|1\.0|< Primeiro plano >|< Rafael Silveira >|
 |dd/mm/aaaa|1\.1|<breve descrição da revisão>|<autores da revisão>|
 
 1. # **Resumo**
 
 *O sistema precisa ser capaz de filtrar os eventos a partir de opções pré-estabelecidas nos critérios de valor, gênero e data. O sistema deve oferecer as seguintes opções pré determinadas dentro dos critérios, valor: Gratuito, até 10 reais, até 30 reais, até 50 reais e acima de 50. Data: Hoje, essa semana, esse mês, próximo mês. Gênero: Show, bairro, gastronomia, teatro, festas, exposições.* 
 
-1. # **Atores**
-**	Usuário do site e público geral.
+2. # **Atores**
+**	Usuário do site, público geral e Agência.
 
-1. # **Precondições**
+3. # **Precondições**
 
 *Sem precondições.*
 
-1. # **Pós-condições**
+4. # **Pós-condições**
 
 `	`*Sem pós-condição.*
 
-1. # **Fluxos de evento**
+5. # **Fluxos de evento**
 
 **5.1 Fluxo básico**
 
