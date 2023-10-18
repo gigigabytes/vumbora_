@@ -8,25 +8,25 @@
 
 |**Data**|**Versão**|**Descrição**|**Autor**|
 | :-: | :- | -: | :-: |
-|15/10/2023|1\.0|<Primeiro plano>|<Rafael Silveira>|
+|15/10/2023|1\.0|< Primeiro plano >|< Rafael Silveira >|
 |dd/mm/aaaa|1\.1|<breve descrição da revisão>|<autores da revisão>|
 
 1. # **Resumo**
 
 *O sistema deve listar todos os eventos cadastrados.*
 
-1. # **Atores**
+2. # **Atores**
 **	Usuário do site, público geral.
 
-1. # **Precondições**
+3. # **Precondições**
 
 *Sem precondições.*
 
-1. # **Pós-condições**
+4. # **Pós-condições**
 
 `	`*Sem pós-condição.*
 
-1. # **Fluxos de evento**
+5. # **Fluxos de evento**
 
 **5.1 Fluxo básico**
 
