@@ -13,15 +13,18 @@
 
 |**O problema de** |Falta de uma plataforma que centralizasse os eventos da cidade.|
 | :- | :- |
-|**afeta**|Produtores de eventos e público geral que não visualizam com facilidade os eventos locais.|
-|**cujo impacto é**|Empobrecimento da vida cultural da cidade.|
-|**um boa solução seria**|Criar uma plataforma que irá facilitar o acesso a agenda cultural da cidade e oferecer a possibilidade de centralizar os eventos de produtores locais;|
+|**Afeta**|Produtores de eventos e público geral que não visualizam com facilidade os eventos locais.|
+|**Cujo impacto é**|Empobrecimento da vida cultural da cidade.|
+|**Uma boa solução seria**|Criar uma plataforma que irá facilitar o acesso a agenda cultural da cidade e oferecer a possibilidade de centralizar os eventos de produtores locais;|
 
 3. **Descrição dos usuários:**
 
 |**Nome**|**Descrição**|**Responsabilidade**|
 | - | - | - |
 |Usuário comum.|<p>**Usuário comum:**  Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. </p><p></p>|<p><p>**Usuário comum**: Busca os eventos, cadastra seus eventos e avalia eventos de outros usuários.</p><p></p>|
+|Produtora.|<p>**Produtora:**  Perfil responsável por gerenciar seus eventos na plataforma para a divulgação dos mesmos. </p><p></p>|<p><p>**Produtora**: Cadastrar e divulgar seus eventos.</p><p></p>|
+
+
 
 4. **Descrição do ambiente dos usuários:**
 
@@ -50,16 +53,18 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 |**Código**|**Nome**|**Descrição**|
 | :- | :- | :- |
 |*F01*|*Cadastro de usuários comuns*|*Realização de criação de perfil englobando alguns dados básicos dos usuários.*|
-|*F02*|*Inscrição dos eventos* |*Os produtores irão adicionar os eventos na plataforma com a descrição referente ao evento.*|
-|*F03*|*Gerenciar a descrição dos eventos*|*Seria editar as informações dos eventos fazendo a atualização ou exclusão do evento, caso necessário.*|
-|*F04*|*Gerenciar perfis*|*Realização de consulta e atualização de dados do perfil do usuário.*|
-|*F05*|*Filtragem dos eventos*|*Os usuários fariam uma filtragem por tipo, local, valor ou data do evento.* |
-|*F06*|*Pesquisa dos eventos *|*Os usuários irão fazer pesquisas com intenção de encontrar eventos de acordo com sua preferência.*|
-|*F07*|*Favoritar um evento *|*O usuário poderá favoritar um evento para ficar salvo para ele e/ou outros usuários que ele irá comparecer.*|
-|*F08*|*Classificar usuários que já produziram eventos.*|*Os usuários poderão  avaliar os usuários que já produziram eventos para passar mais credibilidade.
-*|
-|*F09*|*Filtragem dos usuários que já produziram eventos* |*Os usuários fariam uma busca dos produtores com a melhor avaliação no sistema.*|
-|*F10*|*Compartilhar evento* |*O usuário copiará o link do evento para compartilhamento.*|
+|*F02*|*Cadastro de produtoras*|*Realização de criação de perfil englobando alguns dados básicos da produtora.*|
+|*F03*|*Inscrição dos eventos* |*Os produtores irão adicionar os eventos na plataforma com a descrição referente ao evento.*|
+|*F04*|*Gerenciar a descrição dos eventos*|*Seria editar as informações dos eventos fazendo a atualização ou exclusão do evento, caso necessário.*|
+|*F05*|*Gerenciar perfis*|*Realização de consulta e atualização de dados do perfil do usuário.*|
+|*F06*|*Filtragem dos eventos*|*Os usuários fariam uma filtragem por tipo, local, valor ou data do evento.* |
+|*F07*|*Pesquisa dos eventos*|*Os usuários irão fazer pesquisas com intenção de encontrar eventos de acordo com sua preferência.*|
+|*F08*|*Favoritar um evento*|*O usuário poderá favoritar um evento para ficar salvo para ele e/ou outros usuários que ele irá comparecer.*|
+|*F09*|*Avaliar eventos que já ocorreram.*|*Os usuários poderão  avaliar os eventos que já aconteceram.*|
+|*F10*|*Listagem das produtoras de eventos* |*Os usuários fariam uma busca das produtoras visualizando a listagem delas.*|
+|*F11*|*Compartilhar evento* |*O usuário copiará o link do evento para compartilhamento.*|
+|*F11*|*Comentar no evento* |*Os usuários poderão comentar no evento.*|
+
 
 
 9. **Requisitos NÃO-FUNCIONAIS**
