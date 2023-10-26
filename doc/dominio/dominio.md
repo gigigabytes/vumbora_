@@ -1,6 +1,6 @@
 # Modelo de Domínio
 
-Texto e imagem...
+![Page Principal](diagrama_de_dominio.png)
 
 ## Glossário (sugestão)
 
