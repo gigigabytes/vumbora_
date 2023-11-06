@@ -173,3 +173,15 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/django
+pds/Scripts/activate
+pds/pyvenv.cfg
+pds/Scripts/activate.bat
+pds/Scripts/Activate.ps1
+pds/Scripts/deactivate.bat
+pds/Scripts/django-admin.exe
+pds/Scripts/pip.exe
+pds/Scripts/pip3.10.exe
+pds/Scripts/pip3.exe
+pds/Scripts/python.exe
+pds/Scripts/pythonw.exe
+pds/Scripts/sqlformat.exe
