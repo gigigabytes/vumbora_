@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'vumbora.apps.VumboraConfig',
-    'reset_migrations',
 ]
 
 MIDDLEWARE = [

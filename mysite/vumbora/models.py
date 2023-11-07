@@ -25,5 +25,5 @@ class Evento(models.Model):
     evento_datahora = models.DateTimeField(default = now)
     evento_genero = models.CharField(max_length=200)
     evento_valor = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
-    evento_local = models.ForeignKey(Local, on_delete=models.CASCADE)
+    # evento_local = models.ForeignKey(Local, on_delete=models.CASCADE)
 
