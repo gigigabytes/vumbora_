@@ -14,11 +14,14 @@ class Usuario(models.Model):
 
 class Local(models.Model):
     nome = models.CharField(max_length=200)
-    bairro = models.CharField(max_length=200)
-    cep = models.CharField(max_length=8)
+    bairro = models.CharField(max_length=200, choices=[
+        ('R', 'Ribeira'),
+        ('P', 'Ponta Negra'),
+        ('T', 'Tirol'),
+        ('I', 'Igapó'),
+    ])
+    cep = models.CharField(max_length=20)
     rua= models.CharField(max_length=200)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
     estacionamento = models.BooleanField(default =True)
     def __str__(self):
         return self.nome
@@ -27,7 +30,13 @@ class Evento(models.Model):
     nome = models.CharField(max_length=200)
     info = models.CharField(max_length=200, null=True)
     datahora = models.DateTimeField(default = now)
-    genero = models.CharField(max_length=200)
+    genero = models.CharField(max_length=200,choice =[
+        ('E', 'Exposição'),
+        ('F', 'Festa'),
+        ('G', 'Gastronomia'),
+        ('S', 'Show'),
+        ('T','Teatro'),  
+    ])
     valor = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
     local = models.ForeignKey(Local, on_delete=models.CASCADE, null=True)
     def __str__(self):
