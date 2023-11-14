@@ -32,7 +32,7 @@ class Evento(models.Model):
     nome = models.CharField(max_length=200)
     descricao = models.CharField(max_length=200, null=True)
     datahora = models.DateTimeField(default = now)
-    genero = models.CharField(max_length=200,choices =[
+    genero = models.CharField(max_length=1,choices =[
         ('E', 'Exposição'),
         ('F', 'Festa'),
         ('G', 'Gastronomia'),
