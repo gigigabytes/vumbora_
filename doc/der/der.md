@@ -2,4 +2,4 @@
 
 ## Diagrama de entidade-relacionamento
 
-![Page Principal](Diagrama_entidade-relacionamento.png)
+![Page Principal](Diagrama_ER_Vumbora.png)
