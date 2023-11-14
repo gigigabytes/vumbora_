@@ -1,9 +1,9 @@
 ﻿# CDU003. Pesquisar Eventos
 
-- **Ator principal**: Usuário, público geral, Agência
+- **Ator principal**: Usuário, público geral, produtora
 - **Atores secundários**: ...	 
 - **Resumo**: *O sistema precisa ser capaz de filtrar os eventos a partir de opções pré-estabelecidas nos critérios de valor, gênero e data. O sistema deve oferecer as seguintes opções pré determinadas dentro dos critérios, valor: Gratuito, até 10 reais, até 30 reais, até 50 reais e acima de 50. Data: Hoje, essa semana, esse mês, próximo mês. Gênero: Show, bairro, gastronomia, teatro, festas, exposições. Além disso, deve oferecer a possibilidade de pesquisar por texto eventos usando sua descrição, local e/ou nome.* 
-- **Pré-condição**: Sem precondições
+- **Pré-condição**: Sem pré-condições
 - **Pós-Condição**: Sem pós-condição
 
 ## Fluxo Principal
