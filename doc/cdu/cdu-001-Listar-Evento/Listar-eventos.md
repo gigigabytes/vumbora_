@@ -1,14 +1,12 @@
 ﻿# CDU003. Listar Eventos
 
-- **Ator principal**: Usuário, público geral, Agência
+- **Ator principal**: Usuário, público geral, produtora
 - **Atores secundários**: ...	 
-- **Resumo**: O sistema deve listar os eventos marcados para acontecer naquela semana. 
-- **Pré-condição**: Sem precondições
+- **Resumo**: O sistema deve listar os eventos marcados para acontecer na categoria de pesquisa escolhida pelo usuário. 
+- **Pré-condição**: Sem pré-condição
 - **Pós-Condição**: Sem pós-condição
 
 ## Fluxo Principal
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
-| 1 - Usuário escolhe a opção de listar eventos. | 2 -  Sistema exibe uma lista de eventos disponíveis incluindo detalhes como nome, data, local, descrição e valor. Ordenados por data ou valor de acordo com a opção escolhida, por padrão deve ser utilizado a data. | 
-| 3 - Usuário pode navegar pela lista de eventos. | 4 - Sistema retorna os resultados pertinentes. |
-| 5 - Usuário escolhe um evento. | 6 - Sistema abre a página de descrição do evento escolhido. |
+| 1 - Usuário escolhe o tipo de evento que deseja visualizar. | 2 -  Sistema exibe a lista de eventos disponíveis daquela categoria incluindo informações básicas como nome, data, local, valor e descrição.
