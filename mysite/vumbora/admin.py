@@ -5,3 +5,4 @@ from . models import Evento, Usuario, Local
 admin.site.register(Evento)
 admin.site.register(Usuario)
 admin.site.register(Local)
+
