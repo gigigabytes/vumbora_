@@ -1,0 +1,16 @@
+
+    
+
+
+{% if evento_list %}
+
+    <h1>Eventos cadastrados</h1>
+    <ul>
+        {% for evento in evento_list %}
+            <li><a href="/vumbora">{{ evento.nome }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Não há eventos cadastrados.</p>
+{% endif %}
+
