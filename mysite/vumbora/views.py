@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Evento
+from .models import Evento, Usuario
 
 # Create your views here.
 def index (request):
@@ -12,3 +12,8 @@ def index (request):
 def details (request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     return render(request,'vumbora/detail.html',{'evento':evento})
+
+
+def avaliacao(request, evento_id):
+    evento = Evento.objects.get(pk=evento_id)
+    return render(request,'vumbora/avaliacao.html',{'evento':evento})

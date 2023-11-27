@@ -1,0 +1,28 @@
+
+<h1>
+    {{ evento.nome}}
+</h1>
+
+<h2>
+    <p> Avaliações</p>
+</h2>
+
+{% if avaliacao_list %}
+
+    <ul>
+
+        {% for avaliacao in avaliacao_list %}
+
+            <li>{{ avaliacao.usuario }}</li>
+            <li>{{ avaliacao.nota }}</li>
+            <li>{{ avaliacao.comentario }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+{% else %}
+
+    <p>Não há avaliações cadastradas.</p>
+
+{% endif %}
