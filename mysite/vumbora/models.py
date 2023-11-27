@@ -30,7 +30,7 @@ class Local(models.Model):
     estacionamento = models.BooleanField(default =True)
     def __str__(self):
         return self.nome
-
+    
 class Evento(models.Model):
     nome = models.CharField(max_length=200)
     descricao = models.CharField(max_length=200, null=True)
@@ -45,6 +45,7 @@ class Evento(models.Model):
     valor = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
     local = models.ForeignKey(Local, on_delete=models.CASCADE, null=True)
     arte = models.ImageField(upload_to='images/', null=True)
+    avaliacoes = models.ManyToManyField(Avaliacao)
     def __str__(self):
         return self.nome
 
@@ -55,5 +56,4 @@ class Avaliacao(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     evento = models.ForeignKey(Evento, on_delete=models.CASCADE)
     
-   
-# python -m pip install Pillow
+

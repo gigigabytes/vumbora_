@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Evento, Usuario
+from .models import Evento, Usuario,Avaliacao
 
 # Create your views here.
 def index (request):
-    evento_list= Evento.objects.order_by('datahora')[:5]
+    evento_list = Evento.objects.order_by('datahora')[:5]
     context = {
         'evento_list': evento_list
     }
@@ -16,4 +16,5 @@ def details (request, evento_id):
 
 def avaliacao(request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
+    avaliacao = evento.Avaliacao.all()
     return render(request,'vumbora/avaliacao.html',{'evento':evento})
