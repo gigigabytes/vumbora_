@@ -16,5 +16,5 @@ def details (request, evento_id):
 
 def avaliacao(request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
-    avaliacao = evento.Avaliacao.all()
-    return render(request,'vumbora/avaliacao.html',{'evento':evento})
+    avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
+    return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes})
