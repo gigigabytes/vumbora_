@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont{
+    width: 350px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #8581F6;
+}
+
+.coment{
+    display: flex;
+    justify-content: center;
+   
+    margin:auto;
+}

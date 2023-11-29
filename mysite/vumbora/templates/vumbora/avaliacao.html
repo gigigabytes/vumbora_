@@ -1,13 +1,39 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'vumbora/css/avaliacao.css' %}"/>
+
 <h1>
-    {{evento.nome}}
+    {{evento.nome}} 
 </h1>
 
 <h2>
     <p>Avaliações</p>
 </h2>
 
-{% for avaliacao in avaliacoes %}
+<body>
+    <div class = "row">
+        <div class="stars">
+
+        </div>
+        <div class ="user">
+            <img src="" alt="">
+
+        </div>
+        <div class = "cont">
+            <div class = "coment">
+                <strong><p>Comentário</p></strong>
+    
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+
+
+
+
+<!-- {% for avaliacao in avaliacoes %}
  <li> {{avaliacao.usuario.nome}}</li>
     <li> {{avaliacao.nota}}</li>
     <li> {{avaliacao.comentario}}</li>
-{% endfor %}
+{% endfor %} -->
