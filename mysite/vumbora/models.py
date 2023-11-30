@@ -56,8 +56,7 @@ class Avaliacao(models.Model):
     data = models.DateTimeField(default = now)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     evento = models.ForeignKey('Evento', on_delete=models.CASCADE, null=True)
-    def __str__(self):
-        return self.usuario.nome, self.evento.nome  
+    
     
     
 

@@ -1,20 +1,91 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+.box{
+    height: 2.5vw;
+    width: 8vw;
+    margin-inline:auto;
+    margin-top: 15vw;
+    background-color: #8581F6;
+    border-radius: 50px;
+}
+
+.tittle{
+    display: block;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.out-comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vw;
+    width: 50vw;
+    height: 12vw;
+    background-color: #8581F6;
+    border-radius: 50px;
+    margin-inline:auto ;
+}
+
+.in-comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 50px;
+}
+
 .row{
+    padding-left: 2vw; 
+    display: inline-grid;
+    gap: 1vw;
+    
+}
+
+.outter{
+    width: 30vw;
+    height: 11vw;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-color: #8581F6;
+}
+
+.inner{
+    width: 20vw;
+    height: 5vw;
+    margin-top: 3.5vw;
+    margin-left: 5vw;
+    border-radius: 50px;
+    background-color:white;
+}
+
+.text{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cont{
-    width: 350px;
-    height: 150px;
-    flex-shrink: 0;
+.form{
+    width: 20vw;
+    height: 5vw;
+    margin-top: 3.5vw;
+    margin-left: 5vw;
     border-radius: 50px;
-    background: #8581F6;
-}
-
-.coment{
+    background-color:white;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: black;
     display: flex;
     justify-content: center;
-   
-    margin:auto;
+    align-items: center;
 }

@@ -1,39 +1,64 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'vumbora/css/avaliacao.css' %}"/>
 
-<h1>
-    {{evento.nome}} 
-</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações</title>
+</head>
 
-<h2>
-    <p>Avaliações</p>
-</h2>
+
+<div class = "box">
+    <div class = "tittle"><p>Avaliações</p></div>
+</div>
+
 
 <body>
+ 
+    <div class = "out-comment">
+        <div class = "in-comment">
+            <form  method="POST">
+                {% csrf_token %}
+                <label>comentario</label>
+                {{form.comentario}}
+            <button type = "submit" class = "button">Enviar</button>
+                
+            </form>
+        </div>
+    </div>
+
+  
+
+    
+ 
+    {% for avaliacao in avaliacoes %}
     <div class = "row">
         <div class="stars">
-
         </div>
         <div class ="user">
             <img src="" alt="">
-
         </div>
-        <div class = "cont">
-            <div class = "coment">
-                <strong><p>Comentário</p></strong>
-    
+        <div class = "outter">
+            <div class = "inner">
+                <div class = "text">
+                    <p>{{avaliacao.comentario}}</p>
+                </div>
             </div>
-
         </div>
         
     </div>
+{% endfor %}    
+
+    
+
+    
 </body>
 
+</html>
 
 
 
-<!-- {% for avaliacao in avaliacoes %}
- <li> {{avaliacao.usuario.nome}}</li>
-    <li> {{avaliacao.nota}}</li>
-    <li> {{avaliacao.comentario}}</li>
-{% endfor %} -->
+
+ 
