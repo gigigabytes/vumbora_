@@ -31,17 +31,20 @@
                 {% csrf_token %}
                 <label>Comentario</label>
                 {{form.comentario}}
+                {{form.nota}}
+
+                <button type="submit" class="button-send">Enviar</button>
                 
             </form>
             
         </div>
-        <button type="submit" class="button">Enviar</button>
+       
     </div>
 
 
 
 
-
+{% comment %} Exibição dos comentários {% endcomment %}
     {% for avaliacao in avaliacoes %}
     <div class="row">
         <div class="stars">
