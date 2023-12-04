@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 .box{
     height: 2.5vw;
     width: 8vw;
@@ -88,4 +89,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+label{
+    color: gray;
+}
+
+.box-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+    
+}
+
+button{
+    width: 15%;
+    height: 25%;
+    border-radius: 50px;
+    background-color: A0B952;
+    font-family: 'Inter', sans-serif;
+    justify-items: center;
+    
 }

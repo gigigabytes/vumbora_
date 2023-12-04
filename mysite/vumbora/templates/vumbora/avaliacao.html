@@ -1,64 +1,68 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'vumbora/css/avaliacao.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'vumbora/css/avaliacao.css' %}" />
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 </head>
 
 
-<div class = "box">
-    <div class = "tittle"><p>Avaliações</p></div>
-</div>
 
 
 <body>
- 
-    <div class = "out-comment">
-        <div class = "in-comment">
-            <form  method="POST">
-                {% csrf_token %}
-                <label>comentario</label>
-                {{form.comentario}}
-            <button type = "submit" class = "button">Enviar</button>
-                
-            </form>
+
+    <div class="box">
+        <div class="box-text">
+            <p>Avaliações</p>
         </div>
     </div>
-
-  
-
     
- 
+
+    <div class="out-comment">
+        <div class="in-comment">
+            <form method="POST">
+                {% csrf_token %}
+                <label>Comentario</label>
+                {{form.comentario}}
+                
+            </form>
+            
+        </div>
+        <button type="submit" class="button">Enviar</button>
+    </div>
+
+
+
+
+
     {% for avaliacao in avaliacoes %}
-    <div class = "row">
+    <div class="row">
         <div class="stars">
         </div>
-        <div class ="user">
+        <div class="user">
             <img src="" alt="">
         </div>
-        <div class = "outter">
-            <div class = "inner">
-                <div class = "text">
+        <div class="outter">
+            <div class="inner">
+                <div class="text">
                     <p>{{avaliacao.comentario}}</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
-{% endfor %}    
+    {% endfor %}
 
-    
 
-    
+
+
 </body>
 
 </html>
-
-
-
-
- 
