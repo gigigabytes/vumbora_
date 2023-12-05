@@ -33,7 +33,7 @@
     margin-inline:auto ;
 }
 
-.in-comment{
+/* .in-comment{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +41,7 @@
     height: 5vw;
     background-color: white;
     border-radius: 50px;
-}
+} */
 
 .row{
     padding-left: 2vw; 
@@ -147,4 +147,14 @@ label{
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.coment-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 50px;
 }

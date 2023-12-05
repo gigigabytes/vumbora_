@@ -29,9 +29,9 @@
         <div class="in-comment">
             <form method="POST">
                 {% csrf_token %}
-                <label>Comentario</label>
                 {{form.comentario}}
                 {{form.nota}}
+                {{form.usuario}}
 
                 <button type="submit" class="button-send">Enviar</button>
                 

@@ -21,15 +21,14 @@ def avaliacao(request, evento_id):
     form = AvaliacaoForm()
     if request.method == 'GET':
         return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
-    elif request.method == "POST":
+    if request.method == "POST":
         form = AvaliacaoForm(request.POST)
         if form.is_valid():
             avaliacao = form.save()
-            avaliacao.usuario = request.user
+            # avaliacao.usuario = request.user
+            avaliacao.evento = evento
             avaliacao.save()
             return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
             
             
-        else:
-            return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
-
+       
