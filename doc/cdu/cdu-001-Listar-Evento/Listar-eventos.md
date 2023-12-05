@@ -1,4 +1,4 @@
-﻿# CDU003. Listar Eventos
+﻿# CDU001. Listar Eventos
 
 - **Ator principal**: Usuário, público geral, produtora
 - **Atores secundários**: ...	 
