@@ -3,7 +3,7 @@
 - **Ator principal**: Usuário Cadatrado
 - **Atores secundários**: ...  
 - **Resumo**: Será possível avaliar eventos da plataforma.
-- **Pré-condição**: Estar logado no sistema.
+- **Pré-condição**: Estar logado no sistema, não ser produtora.
 - **Pós-Condição**: Avalição adicionada ao evento.
 
 ## Fluxo Principal
