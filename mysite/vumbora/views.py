@@ -1,15 +1,32 @@
 from django.shortcuts import render
-from .models import Evento
+from .models import Evento, Usuario,Avaliacao
+from .forms import AvaliacaoForm
 from datetime import datetime, timedelta
 
 # Create your views here.
 def index (request):
-    evento_list= Evento.objects.order_by('datahora')[:5]
+    evento_list = Evento.objects.order_by('datahora')[:5]
     context = {
         'evento_list': evento_list
     }
     return render(request,'vumbora/index.html',context)
 
+def avaliacao(request, evento_id):
+    evento = Evento.objects.get(pk=evento_id)
+    avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
+    form = AvaliacaoForm()
+    if request.method == 'GET':
+        return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
+    if request.method == "POST":
+        form = AvaliacaoForm(request.POST)
+        if form.is_valid():
+            avaliacao = form.save()
+            # avaliacao.usuario = request.user
+            avaliacao.evento = evento
+            avaliacao.save()
+            return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
+            
+            
 def details (request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     return render(request,'vumbora/detail.html',{'evento':evento})

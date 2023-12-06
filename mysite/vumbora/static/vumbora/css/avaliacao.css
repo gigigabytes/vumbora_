@@ -1,0 +1,160 @@
+*{
+    
+    box-sizing: border-box;
+}
+
+
+.box{
+    height: 2.5vw;
+    width: 8vw;
+    margin-inline:auto;
+    margin-top: 15vw;
+    background-color: #8581F6;
+    border-radius: 50px;
+}
+
+.tittle{
+    display: block;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.out-comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vw;
+    width: 50vw;
+    height: 12vw;
+    background-color: #8581F6;
+    border-radius: 50px;
+    margin-inline:auto ;
+}
+
+/* .in-comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 50px;
+} */
+
+.row{
+    padding-left: 2vw; 
+    display: inline-grid;
+    gap: 1vw;
+    
+}
+
+.outter{
+    width: 30vw;
+    height: 11vw;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background-color: #8581F6;
+}
+
+.inner{
+    width: 20vw;
+    height: 5vw;
+    margin-top: 3.5vw;
+    margin-left: 5vw;
+    border-radius: 50px;
+    background-color:white;
+}
+
+.text{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 20vw;
+    height: 5vw;
+    margin-top: 3.5vw;
+    margin-left: 5vw;
+    border-radius: 50px;
+    background-color:white;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    color: gray;
+}
+
+.box-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+    
+}
+
+.button-send {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: A0B952;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.coment-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 50px;
+}

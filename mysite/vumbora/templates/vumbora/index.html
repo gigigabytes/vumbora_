@@ -7,7 +7,7 @@
     <h1>Eventos cadastrados</h1>
     <ul>
         {% for evento in evento_list %}
-            <li><a href="/vumbora">{{ evento.nome }}</a></li>
+            <li><a href="{% url 'vumbora:details' evento.id %}">{{ evento.nome }}</a> </li>
         {% endfor %}
     </ul>
 {% else %}
