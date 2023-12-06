@@ -1,12 +1,12 @@
 ﻿# CDU005. Listar Eventos da Semana
 
-- **Ator principal**: Usuário, público geral, produtora
+- **Ator principal**: Usuário, produtora
 - **Atores secundários**: ...	 
-- **Resumo**: O sistema deve listar os eventos marcados para acontecer na categoria de pesquisa escolhida pelo usuário. 
-- **Pré-condição**: Sem pré-condição
-- **Pós-Condição**: Sem pós-condição
+- **Resumo**: O sistema deve listar todos os eventos que vão acontecer na semana. 
+- **Pré-condição**: Usuário deve estar cadastrado no sistema.
+- **Pós-Condição**: Os Eventos da semana serão listados para o usuário.
 
 ## Fluxo Principal
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
-| 1 - Usuário escolhe o tipo de evento que deseja visualizar. | 2 -  Sistema exibe a lista de eventos disponíveis daquela categoria incluindo informações básicas como nome, data, local, valor e descrição.
+| 1 - Usuário escolhe a opção de filtragem para listar os eventos da semana. | 2 -  Sistema exibe a lista de eventos que serão realizados na semana em que o usuário fizer a filtragem.
