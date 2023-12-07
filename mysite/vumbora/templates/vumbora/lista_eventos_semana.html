@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Semana</title>
+</head>
+<body>
+
+   <strong> TA APARECENDO AQUI TA VENDO </strong> 
+
+    {% for eventos_semana in eventos_semana %}
+        <li> {{ eventos_semana.nome }}</li>
+        <li> {{ eventos_semana.descricao }}</li>
+        <li> {{ eventos_semana.datahora }}</li>
+        <li> {{ eventos_semana.genero }}</li>
+    {% endfor %}
+</body>
+</html>

@@ -9,6 +9,8 @@
         {% for evento in evento_list %}
             <li><a href="{% url 'vumbora:details' evento.id %}">{{ evento.nome }}</a> </li>
         {% endfor %}
+
+        <a href="{% url 'vumbora:lista_eventos_semana' %}"> Listar Eventos da Semana </a>
     </ul>
 {% else %}
     <p>Não há eventos cadastrados.</p>

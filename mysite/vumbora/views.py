@@ -26,7 +26,7 @@ def avaliacao(request, evento_id):
             avaliacao.save()
             return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
             
-            
+
 def details (request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     return render(request,'vumbora/detail.html',{'evento':evento})
@@ -40,9 +40,9 @@ def eventos_na_semana(request):
     fim_semana = inicio_semana + timedelta(days=6)
 
     # Filtra os eventos da semana
-    eventos_semana = Evento.objects.filter(data_inicio__range=[inicio_semana, fim_semana])
+    eventos_semana = Evento.objects.filter(datahora__range=[inicio_semana, fim_semana])
 
     # Renderiza o template com os eventos
-    return render(request, 'seu_app/lista_eventos_semana.html', {'eventos_semana': eventos_semana})
+    return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana})
 
 
