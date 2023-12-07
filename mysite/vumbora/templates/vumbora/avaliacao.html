@@ -23,28 +23,26 @@
             <p>Avaliações</p>
         </div>
     </div>
-    
+
 
     <div class="out-comment">
-        <div class="in-comment">
-            <form method="POST">
-                {% csrf_token %}
-                <label>Comentario</label>
-                {{form.comentario}}
-                {{form.nota}}
-
-                <button type="submit" class="button-send">Enviar</button>
-                
-            </form>
-            
-        </div>
-       
+        <form method="POST" >
+            {% csrf_token %}
+            {% for field in form %}
+            <p>
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+            </p>
+        {% endfor %}
+            <button type="submit" class="button-send">Enviar</button>
+        </form>
     </div>
 
 
 
 
-{% comment %} Exibição dos comentários {% endcomment %}
+    {% comment %} Exibição dos comentários {% endcomment %}
     {% for avaliacao in avaliacoes %}
     <div class="row">
         <div class="stars">
@@ -69,3 +67,18 @@
 </body>
 
 </html>
+
+<!-- <div class ="card">
+
+    <div class = "comment">
+
+    </div>
+
+    <div class = "star-ranking">
+
+    </div>
+
+    <div class = "user">
+
+    </div>
+</div> -->

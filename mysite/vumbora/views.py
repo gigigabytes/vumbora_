@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
 
@@ -18,18 +18,19 @@ def details (request, evento_id):
 def avaliacao(request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
-    form = AvaliacaoForm()
+
     if request.method == 'GET':
-        return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
-    elif request.method == "POST":
+        form = AvaliacaoForm()
+        return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
+    elif request.method == 'POST':
         form = AvaliacaoForm(request.POST)
         if form.is_valid():
-            avaliacao = form.save()
-            avaliacao.usuario = request.user
-            avaliacao.save()
-            return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
+            avaliacoes = form.save(commit=False)
+            # avaliacao.usuario = request.user
+            avaliacoes.evento = evento
+            avaliacoes.save()
+            avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
             
-            
+            return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
         else:
-            return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
-
+            return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
