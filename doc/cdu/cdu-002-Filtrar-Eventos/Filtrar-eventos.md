@@ -1,4 +1,4 @@
-﻿# CDU003. Pesquisar Eventos
+﻿# CDU002. Filtrar Eventos
 
 - **Ator principal**: Usuário, público geral, produtora
 - **Atores secundários**: ...	 

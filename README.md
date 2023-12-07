@@ -1,15 +1,9 @@
-# Vumbora
+# Vumbora?
 
-<img src="logo.png" width="200" height="200" />
-
->Inserir uma logo para o projeto
-
-#Vumbora
-
-Vumbora é uma plataforma que facilita o acesso a agenda cultural da cidade Natal/RN, buscando oferecer a centralização e divulgação do que está acontecendo em Natal em diferentes nichos de entretenimento potiguar. 
+"Vumbora?" é uma plataforma que facilita o acesso a agenda cultural da cidade Natal/RN, buscando oferecer a centralização e divulgação do que está acontecendo em Natal em diferentes nichos de entretenimento potiguar. 
 
 ## 👥 Equipe e Contatos
-1. Leonardo Teixeira Martins - silva.dantas2@escolar.ifrn.edu.br
+1. Leonardo Teixeira Martins - leonardo.t@escolar.ifrn.edu.br
 2. Maria Giovanna Lino dos Santos - maria.giovanna@escolar.ifrn.edu.br
 3. Matheus da Silva Dantas - silva.dantas2@escolar.ifrn.edu.br
 4. Rafael Silveira Santos - silveira.rafael@escolar.ifrn.edu.br
