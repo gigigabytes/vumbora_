@@ -10,10 +10,10 @@
    <strong> TA APARECENDO AQUI TA VENDO </strong> 
 
     {% for eventos_semana in eventos_semana %}
-        <li> {{ eventos_semana.nome }}</li>
-        <li> {{ eventos_semana.descricao }}</li>
-        <li> {{ eventos_semana.datahora }}</li>
-        <li> {{ eventos_semana.genero }}</li>
+        <li> Nome: {{ eventos_semana.nome }}</li>
+        <li> Descrição: {{ eventos_semana.descricao }}</li>
+        <li> Horário: {{ eventos_semana.datahora }}</li>
+        <li> Genero: {{ eventos_semana.genero }}</li>
     {% endfor %}
 </body>
 </html>
