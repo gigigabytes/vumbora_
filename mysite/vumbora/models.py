@@ -16,14 +16,20 @@ class Usuario(models.Model):
     def __str__(self):
         return self.nome
 
+class Bairro(models.Model):
+    nome = models.CharField(max_length= 200)
+    zona = models.CharField(max_length=2, choices=[
+        ('ZN', 'Zona Norte'),
+        ('ZS','Zona Sul'),
+        ('ZL', 'Zona Leste'),
+        ('ZO', 'Zona Oeste')
+    ])
+    def __str__(self):
+        return self.nome
+
 class Local(models.Model):
     nome = models.CharField(max_length=200)
-    bairro = models.CharField(max_length=1, choices=[
-        ('R', 'Ribeira'),
-        ('P', 'Ponta Negra'),
-        ('T', 'Tirol'),
-        ('I', 'Igapó'),
-    ])
+    bairro = models.ForeignKey(Bairro,on_delete=models.CASCADE, null=True)
     cep = models.CharField(max_length=20)
     rua= models.CharField(max_length=200)
     numero = models.CharField(max_length=4, blank = True)
@@ -31,10 +37,7 @@ class Local(models.Model):
     def __str__(self):
         return self.nome
 
-class Evento(models.Model):
-    nome = models.CharField(max_length=200)
-    descricao = models.CharField(max_length=200, null=True)
-    datahora = models.DateTimeField(default = now)
+class Genero(models.Model):
     genero = models.CharField(max_length=1,choices =[
         ('E', 'Exposição'),
         ('F', 'Festa'),
@@ -42,12 +45,27 @@ class Evento(models.Model):
         ('S', 'Show'),
         ('T','Teatro'),  
     ])
+    def __str__(self):
+        return self.genero
+    
+
+class Evento(models.Model):
+    nome = models.CharField(max_length=200)
+    descricao = models.CharField(max_length=200, null=True)
+    datahora = models.DateTimeField(default = now)
     valor = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
     local = models.ForeignKey(Local, on_delete=models.CASCADE, null=True)
-    arte = models.ImageField(upload_to='images/', null=True)
+    arte = models.ImageField(upload_to='images/', null=True, blank = True)
+    genero = models.ManyToManyField(Genero)
     def __str__(self):
         return self.nome
     def img_preview(self):
         return mark_safe(f'<img src = "{self.product_img.url}" width = "{self.product.width}" height="{self.product.height}"/>')
-    
-# python -m pip install Pillow
+
+class Comenta(models.Model):
+    comentario = models.CharField(max_length=200)
+    data_hora = models.DateTimeField(default=now)
+    evento = models.ForeignKey(Evento, on_delete=models.CASCADE,null=True)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE,null=True)
+
+# python -m pip install Pill
