@@ -10,18 +10,21 @@
 </head>
 <body>
 
-   <strong> TA APARECENDO AQUI TA VENDO </strong> 
+    <div class="events-container-duplicate">
+        {% for eventos_semana in eventos_semana %}
+            <div class="event-item-duplicate">
+                {% if eventos_semana.arte %}
+                    <img class="arte" src="{{ eventos_semana.arte.url }}" alt=""><br>
+                {% endif %}
+                <strong>Nome:</strong> {{ eventos_semana.nome }}<br>
+                <strong>Descrição:</strong> {{ eventos_semana.descricao }}<br>
+                <strong>Horário:</strong> {{ eventos_semana.datahora }}<br>
+                <strong>Valor:</strong> {{ eventos_semana.valor }}<br>
+                <strong>Local:</strong> {{ eventos_semana.local }}<br>
+                <strong>Usuário:</strong> {{ eventos_semana.usuario }}<br>
+            </div>
+        {% endfor %}
+    </div>
 
-    {% for eventos_semana in eventos_semana %}
-        <li> Nome: {{ eventos_semana.nome }}</li>
-        <li> Descrição: {{ eventos_semana.descricao }}</li>
-        <li> Horário: {{ eventos_semana.datahora }}</li>
-        <li> Valor: {{ eventos_semana.valor }}</li>
-        <li> Local: {{ eventos_semana.local }}</li>
-        {% if eventos_semana.arte %}
-            <li> Arte: <img src="{{ eventos_semana.arte.url }}" alt=""></li>
-        {% endif %}
-        <li> Usuário: {{ eventos_semana.usuario }}</li>
-    {% endfor %}
 </body>
 </html>

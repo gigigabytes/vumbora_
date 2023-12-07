@@ -2,3 +2,28 @@ img {
     width: 50px;
     height: 100;
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+.events-container-duplicate{
+    width: 20%px;
+}
+.events-container, .events-container-duplicate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-item, .event-item-duplicate {
+    width: 23%;
+    border: 3px solid #f30909;
+    box-shadow: 0 0 10px red;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+
+}
+.arte {
+    width: 100%;
+}
