@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 def index (request):
@@ -25,12 +27,10 @@ def avaliacao(request, evento_id):
     elif request.method == 'POST':
         form = AvaliacaoForm(request.POST)
         if form.is_valid():
-            avaliacoes = form.save(commit=False)
+            nova_avaliacao = form.save(commit=False)
             # avaliacao.usuario = request.user
-            avaliacoes.evento = evento
-            avaliacoes.save()
-            avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
-            
-            return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
+            nova_avaliacao.evento = evento
+            nova_avaliacao.save()
+            return HttpResponseRedirect(reverse('vumbora:avaliacao', args=(evento.id,)))
         else:
             return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
