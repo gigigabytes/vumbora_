@@ -12,7 +12,7 @@ class Usuario(models.Model):
         ('J', 'Jurídica')
     ])
     identidade = models.CharField(max_length =14)
-    foto = models.ImageField(upload_to='images/', null=True)
+    foto = models.ImageField(upload_to='images/', null=True, blank=True)
     def __str__(self):
         return self.nome
 
@@ -34,6 +34,8 @@ class Local(models.Model):
     rua= models.CharField(max_length=200)
     numero = models.CharField(max_length=4, blank = True)
     estacionamento = models.BooleanField(default =True)
+    class Meta:
+        verbose_name_plural = "Locais"
     def __str__(self):
         return self.nome
 
@@ -45,6 +47,8 @@ class Genero(models.Model):
         ('S', 'Show'),
         ('T','Teatro'),  
     ])
+    class Meta:
+        verbose_name_plural = "Gêneros"
     def __str__(self):
         return self.genero
     
@@ -67,5 +71,6 @@ class Comenta(models.Model):
     data_hora = models.DateTimeField(default=now)
     evento = models.ForeignKey(Evento, on_delete=models.CASCADE,null=True)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE,null=True)
-
+    class Meta:
+        verbose_name_plural = "Comentários"
 # python -m pip install Pill
