@@ -1,113 +1,7 @@
 *{
-    
     box-sizing: border-box;
 }
-
-
-.box{
-    height: 2.5vw;
-    width: 8vw;
-    background-color: #8581F6; /* Set your desired background color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-}
-
-.tittle{
-    display: block;
-    font-size: 1vw;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-}
-
-.out-comment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15vw;
-    width: 50vw;
-    height: 12vw;
-    background-color: #8581F6;
-    border-radius: 50px;
-    margin-inline:auto ;
-}
-
-/* .in-comment{
-/* .in-comment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40vw;
-    height: 5vw;
-    background-color: white;
-    border-radius: 50px;
-} */
-} */
-
-.row{
-    padding-left: 2vw; 
-    display: inline-grid;
-    gap: 1vw;
-    
-}
-
-.outter{
-    width: 30vw;
-    height: 11vw;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: #8581F6;
-}
-
-.inner{
-    width: 20vw;
-    height: 5vw;
-    margin-top: 3.5vw;
-    margin-left: 5vw;
-    border-radius: 50px;
-    background-color:white;
-}
-
-.text{
-    font-size: 1.2vw;
-    font-weight: bold;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.form{
-    width: 20vw;
-    height: 5vw;
-    margin-top: 3.5vw;
-    margin-left: 5vw;
-    border-radius: 50px;
-    background-color:white;
-    font-size: 1.2vw;
-    font-weight: bold;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-label{
-    color: gray;
-}
-
-.box-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
-    font-size: large;
-    text-align: center;
-    
-}
-
+/* Botões e estrelas */
 .button-send {
   align-items: center;
   background-clip: padding-box;
@@ -153,18 +47,111 @@ label{
   transform: translateY(0);
 }
 
-.comment-textarea{
-    width: 40vw;
-    height: 5vw;
-    margin-top: 3.5vw;
-    margin-left: 3vw;
-    border-radius: 50px;
-    background-color:white;
-    font-size: 1.2vw;
+.checked {
+    color: orange;
+}
+
+.my-btn{
+    background-color: inherit !important;
+    border: 0 !important;
+    cursor: pointer;
+}
+
+/* Forms e avaliações */
+
+/* Botão avaliações */
+#tittle{
+    font-size: 20px;
     font-weight: bold;
-    color: black;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #8581F6;
+    border-radius: 50px;
+    height: 50px;
+    width: 10%;
+}
+
+/* Relativo as avaliações */
+.menu-op{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+}
+
+.coment-section{
+    display: inline-grid;
+    background-color: #8581F6;
+    gap: 2vw;
+    margin-left: 2vw;
+    border-radius: 50px;
+    width: 30vw;
+    height: 10vw;
+    margin-top: 1.5vw;
+    
+}
+
+#coment-text{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Relativo ao form de avaliar */
+
+.form-avaliar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+#form-comentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8581F6;
+    gap: 2vw;
+    margin-left: 2vw;
+    border-radius: 50px;
+    width: 60vw;
+    height: 15vw;
+    margin-top: 1.5vw;
+}
+
+.form-comentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-left: 2vw;
+    border-radius: 50px;
+    width: 80%;
+    height: 55%;
+    margin-top: 1.5vw;
     resize: none;
 }
+.form-comentario::placeholder{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    margin: 0%;
+    text-align: center;
+    align-items: center;
+}
+
+textarea{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    margin: 0%;
+    text-align: center;
+    align-items: center;
+    resize: none;
+}
+

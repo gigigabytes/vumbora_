@@ -29,6 +29,8 @@ class Local(models.Model):
     rua= models.CharField(max_length=200)
     numero = models.CharField(max_length=4, blank = True)
     estacionamento = models.BooleanField(default = True)
+    class Meta:
+        verbose_name_plural = "Locais"
     def __str__(self):
         return self.nome
      
@@ -52,7 +54,7 @@ class Evento(models.Model):
 
 class Avaliacao(models.Model):
     nota = models.IntegerField(default=0,validators=[MaxValueValidator(5), MinValueValidator(1)])
-    comentario = models.CharField(max_length=200, null=True)
+    comentario = models.CharField(max_length=200, null=True,blank=True)
     data = models.DateTimeField(default = now)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     evento = models.ForeignKey('Evento', on_delete=models.CASCADE, null=True)

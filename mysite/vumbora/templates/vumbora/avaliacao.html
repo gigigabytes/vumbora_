@@ -11,31 +11,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'vumbora/js/avaliacao.js' %}" defer></script>
 </head>
 
 
 
 
-<body>
+<body data-url="{% url 'vumbora:avaliacao' evento.id %}">
 
-    <div class="box">
-        <div class="box-text">
-            <p>Avaliações</p>
-        </div>
+   <div class = "menu-op">
+    <div id ="tittle" >
+        <p>Avaliações</p>
     </div>
+   </div>
 
-
-    <div class="out-comment">
-        <form method="POST" >
+    <div class="form-avaliar">
+        <form method="POST">
             {% csrf_token %}
-            {% for field in form %}
-            <p>
-                {{ field.label_tag }}
-                {{ field }}
-                {{ field.errors }}
-            </p>
-        {% endfor %}
-            <button type="submit" class="button-send">Enviar</button>
+            <button type="submit" class="fa fa-star fa-2x my-btn " id="first"></button>
+            <button type="submit" class="fa fa-star fa-2x my-btn " id="second"></button>
+            <button type="submit" class="fa fa-star fa-2x my-btn " id="third"></button>
+            <button type="submit" class="fa fa-star fa-2x my-btn " id="fourth"></button>
+            <button class="fa fa-star fa-2x my-btn " id="fifth"></button>
+            <div id = "form-comentario">
+                {{form.comentario}}
+            </div>
         </form>
     </div>
 
@@ -44,21 +46,11 @@
 
     {% comment %} Exibição dos comentários {% endcomment %}
     {% for avaliacao in avaliacoes %}
-    <div class="row">
-        <div class="stars">
+        <div class = "coment-section">
+           <div id = "coment-text">
+                <p>{{avaliacao.comentario}}</p>
+           </div>
         </div>
-        <div class="user">
-            <img src="" alt="">
-        </div>
-        <div class="outter">
-            <div class="inner">
-                <div class="text">
-                    <p>{{avaliacao.comentario}}</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
     {% endfor %}
 
 
@@ -67,18 +59,3 @@
 </body>
 
 </html>
-
-<!-- <div class ="card">
-
-    <div class = "comment">
-
-    </div>
-
-    <div class = "star-ranking">
-
-    </div>
-
-    <div class = "user">
-
-    </div>
-</div> -->
