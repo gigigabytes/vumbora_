@@ -9,6 +9,9 @@ const form = document.querySelector('form')
 const confirmbox = document.getElementById('confirm-box')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
 const url = document.body.getAttribute('data-url')
+const comentarioInput = document.getElementById('id_comentario');  // Substitua 'id_do_seu_campo_de_comentario' pelo ID correto
+
+
 const handleStarSelect = (size) =>{
     const children = form.children
     
@@ -98,15 +101,35 @@ if (one){
                 console.log(response)
             
                 setTimeout(function(){
-                    window.location.reload()
+                    window.location.href = url
                 }, 1000)    
             },
         })
 }))
 }
 
-// Representar estrelas nas avaliações
+// Enviar comentário
+document.getElementById('button-enviar').addEventListener('click', function(){
+    const comentario = comentarioInput.value
+    
+    $.ajax({
+        type:'POST',
+        url: url,
+        data:{
+            'csrfmiddlewaretoken': csrf[0].value,
+            'comentario': comentario,
+            'usuario': usuario,
+        },
+        success: function(response){
+            alert('Obrigado por comentar', response);
+            console.log(response)
+        
+            setTimeout(function(){
+                window.location.href = url
+            }, 1000)    
+        },
+    })
+}
 
-
-
+)
 

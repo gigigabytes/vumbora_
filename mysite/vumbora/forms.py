@@ -7,5 +7,5 @@ class AvaliacaoForm(forms.ModelForm):
         model = Avaliacao
         fields = ['nota', 'comentario', 'usuario'] # campos que serão exibidos no formulário
         widgets = {
-            'comentario': forms.Textarea(attrs={'class': 'form-comentario', 'placeholder': 'Comentário'}),
+            'comentario': forms.Textarea(attrs={'class': 'form-comentario', 'placeholder': 'Comentário', 'id': 'id_comentario'}),
         }

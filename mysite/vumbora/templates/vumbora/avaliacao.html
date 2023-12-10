@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{% static 'vumbora/js/avaliacao.js' %}" defer></script>
+    <script src="{%static 'vumbora/js/comentario.js' %}" defer datanota="{{avaliacao.nota}}"></script>
+    </script>
 </head>
 
 
@@ -21,11 +23,11 @@
 
 <body data-url="{% url 'vumbora:avaliacao' evento.id %}">
 
-   <div class = "menu-op">
-    <div id ="tittle" >
-        <p>Avaliações</p>
+    <div class="menu-op">
+        <div id="tittle">
+            <p>Avaliações</p>
+        </div>
     </div>
-   </div>
 
     <div class="form-avaliar">
         <form method="POST">
@@ -35,9 +37,11 @@
             <button type="submit" class="fa fa-star fa-2x my-btn " id="third"></button>
             <button type="submit" class="fa fa-star fa-2x my-btn " id="fourth"></button>
             <button class="fa fa-star fa-2x my-btn " id="fifth"></button>
-            <div id = "form-comentario">
+            <div id="form-comentario">
                 {{form.comentario}}
+                <button type = "button" class="button-send" id ="button-enviar">Enviar comentário</button>
             </div>
+            
         </form>
     </div>
 
@@ -46,11 +50,25 @@
 
     {% comment %} Exibição dos comentários {% endcomment %}
     {% for avaliacao in avaliacoes %}
-        <div class = "coment-section">
-           <div id = "coment-text">
-                <p>{{avaliacao.comentario}}</p>
-           </div>
+    <div class="coment-section" data-nota="{{avaliacao.nota}}">
+        <div id="estrelas-nota">
+            <span type="submit" class="fa fa-star fa-2x nota-btn_ " id="um_{{avaliacao.id}}"></span>
+            <span type="submit" class="fa fa-star fa-2x nota-btn " id="dois_{{avaliacao.id}}"></span>
+            <span type="submit" class="fa fa-star fa-2x nota-btn " id="tres_{{avaliacao.id}}"></span>
+            <span type="submit" class="fa fa-star fa-2x nota-btn " id="quatro_{{avaliacao.id}}"></span>
+            <span type="submit" class="fa fa-star fa-2x nota-btn " id="cinco_{{avaliacao.id}}"></span>
         </div>
+        <div id = "caixa-texto">
+            <div id="coment-text">
+                {% if avaliacao.comentario is null %}
+                    <p>Avaliação sem comentário</p>
+                {% else %}    
+                    <p>{{avaliacao.comentario}}</p>
+                {% endif %} 
+            </div>
+        </div>
+    </div>
+
     {% endfor %}
 
 

@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
 /* Botões e estrelas */
 .button-send {
   align-items: center;
@@ -45,7 +49,7 @@
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
-}
+} 
 
 .checked {
     color: orange;
@@ -90,6 +94,8 @@
     width: 30vw;
     height: 10vw;
     margin-top: 1.5vw;
+    align-items: center;
+    justify-content: center;
     
 }
 
@@ -97,9 +103,14 @@
     font-size: 20px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
+}
+
+#caixa-texto{
+    background-color: white;
+    border-radius: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: right;
 }
 
 /* Relativo ao form de avaliar */
@@ -116,20 +127,13 @@
     justify-content: center;
     align-items: center;
     background-color: #8581F6;
-    gap: 2vw;
-    margin-left: 2vw;
     border-radius: 50px;
     width: 60vw;
     height: 15vw;
-    margin-top: 1.5vw;
+
 }
 
 .form-comentario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    margin-left: 2vw;
     border-radius: 50px;
     width: 80%;
     height: 55%;
@@ -139,19 +143,21 @@
 .form-comentario::placeholder{
     font-size: 20px;
     font-family: 'Inter', sans-serif;
-    display:flex;
-    margin: 0%;
-    text-align: center;
-    align-items: center;
 }
 
 textarea{
     font-size: 20px;
     font-family: 'Inter', sans-serif;
-    display:flex;
     margin: 0%;
     text-align: center;
     align-items: center;
     resize: none;
 }
+
+.nota-btn{
+   margin-top: 5px;
+   padding-left: 15px;
+}
+
+
 

@@ -33,7 +33,7 @@ def avaliacao(request, evento_id):
             # avaliacao.usuario = request.user
             nova_avaliacao.evento = evento
             nova_avaliacao.save()
-            return JsonResponse({'success': True})
+            # return JsonResponse({'success': True})
             return HttpResponseRedirect(reverse('vumbora:avaliacao', args=(evento.id,)))
         else:
             return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
