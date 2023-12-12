@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Evento
 
 # Create your views here.
@@ -9,6 +9,10 @@ def index (request):
     }
     return render(request,'vumbora/index.html',context)
 
-def details (request, evento_id):
-    evento = Evento.objects.get(pk=evento_id)
-    return render(request,'vumbora/detail.html',{'evento':evento})
+def details(request, evento_id):
+    evento = get_object_or_404(Evento, pk=evento_id)
+    context = {
+        'evento': evento,
+        'arte_url': evento.arte.url if evento.arte else None
+    }
+    return render(request, 'vumbora/detail.html', context)

@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Asteristico';
+    src: url('Asteristico.otf') format('otf'),
+         url('Asteristico.ttf') format('ttf'),
+  }
+#barra{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+#procura{
+    border: 5px;
+    border-color: black;
+    display: flex;
+    align-items: center;
+}
+#icone-pesquisa{
+    background-color: transparent;
+    color: gray;
+    border-color: transparent;
+}
+#pesquisa{
+    border-color: black;
+}
 h1{
-    font: 'Arial';
+    font-family: 'Asteristico';
 }
