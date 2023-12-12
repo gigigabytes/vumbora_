@@ -32,17 +32,16 @@ def details (request, evento_id):
     return render(request,'vumbora/detail.html',{'evento':evento})
 
 def eventos_na_semana(request):
-    # Obtém a data atual
+     # Lógica para filtrar eventos da semana, se aplicável
     hoje = datetime.now()
-
-    # Calcula o início e o fim da semana
     inicio_semana = hoje - timedelta(days=hoje.weekday())
     fim_semana = inicio_semana + timedelta(days=6)
-
-    # Filtra os eventos da semana
     eventos_semana = Evento.objects.filter(datahora__range=[inicio_semana, fim_semana])
 
+    # Adicione uma mensagem se não houver eventos
+    mensagem_sem_eventos = "Não há eventos a serem realizados nesta semana." if not eventos_semana else None
+
     # Renderiza o template com os eventos
-    return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana})
+    return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
 
 
