@@ -3,11 +3,22 @@ img {
     height: 100;
 }
 
+h2{
+    display: inline-block;
+}
+
 body {
     font-family: Arial, sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.dropdown {
+    display: inline-block;
 }
 .events-container-duplicate{
     width: 20%px;
+    margin-top: 50px;
 }
 .events-container, .events-container-duplicate {
     display: flex;
