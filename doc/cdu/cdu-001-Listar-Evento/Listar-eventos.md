@@ -11,7 +11,7 @@
 | :-----------------: | :-----------------: | 
 | 1 - Usuário faz a busca do evento que deseja visulizar. | 2 -  Sistema exibe a lista de eventos disponíveis daquela categoria incluindo informações básicas como nome, data, local, e valor.
 
-## Fluxo Alternativo
+## Fluxo de Exceção : Evento não existente
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
 | 1 - Usuário faz a busca de um evento que não existe. | 2 -  Sistema exibe uma mensagem dizendo que a busca não foi atendida.
