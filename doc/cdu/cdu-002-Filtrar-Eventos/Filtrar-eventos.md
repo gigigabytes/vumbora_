@@ -24,6 +24,6 @@
 | 1.2 - Ator escreve palavras chaves relacionadas com o que procura. |2.2 - Sistema procura coincidências das palavras digitadas com nome, local, descrição e gênero dos eventos cadastrados na plataforma e retorna uma lista dos eventos que apresentam coincidências, ordenando pelo número de coincidências que não devem considerar letras maiúsculas como diferente de minúsculas e nem os acentos. Sistema também oferece a possibilidade de filtrar a busca por gênero, valor ou data. Fluxo retorna para o fluxo principal no passo 3. |
 
 ## Protótipo 
-![Filtra Eventos](Filtrar-Eventos.png)
+![Filtra Eventos](Filtrar_Eventos.png)
 
 
