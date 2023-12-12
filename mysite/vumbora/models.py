@@ -3,6 +3,7 @@ from django.utils.timezone import now
 from django.utils.html import mark_safe
 
 
+
 # Create your models here.
 class Usuario(models.Model):
     nome = models.CharField(max_length=200)

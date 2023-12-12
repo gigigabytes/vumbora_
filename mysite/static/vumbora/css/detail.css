@@ -49,20 +49,28 @@ h1{
 }
 #extras{
     position: relative;
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    width: 40%;
+    padding-left: 10%;
 }
 #arte-evento{
    order: -1;
+   padding-left: 10%;
 }
 #arte-evento img{
-    
-    width: 100%;
-    height: 10%;
+    width: 50%;
+    height: 50%;
+    margin: 20px;
 }
 
 #informacoes-adicionais-evento{
     margin-top: 10px;
+    background-color: #dd5a39;
+    height: 50%;
+    margin: 20px;
+    border-radius: 10px;
+    padding-left: 10%;
 }
 
 #evento-local{
