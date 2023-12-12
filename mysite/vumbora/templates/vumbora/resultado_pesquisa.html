@@ -10,14 +10,14 @@
 
 <h1>Resultados da Pesquisa</h1>
 
-<form method="get" action="{% url 'pesquisar_eventos' %}">
+<form method="post" action="{% url 'pesquisar_eventos' %}">
     {{ form.as_p }}
     <button type="submit">Pesquisar</button>
 </form>
 
 {% for evento in eventos %}
     <h2>{{ evento.nome }}</h2>
-    <p>{{ evento.descricao }} - {{ evento.local.nome }}</p>
+    <!-- <p>{{ evento.descricao }} - {{ evento.local.nome }}</p> -->
 {% endfor %}
 
 </body>
