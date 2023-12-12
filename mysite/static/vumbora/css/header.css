@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Asteristico';
-    src: url('Asteristico.otf') format('otf'),
+    src:
          url('Asteristico.ttf') format('ttf'),
   }
 #barra{
@@ -25,4 +25,30 @@
 }
 h1{
     font-family: 'Asteristico';
+}
+#barra-evento{
+    display: flex;
+}
+#icone-evento{
+    background-image: url("evento.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+}
+#usuario-barra{
+    display: flex;
+}
+#icone-perfil{
+    background-image: url("profile.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+}
+#icone-barra{
+    background-image: url("menu.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    border: transparent;
+    background-color: transparent;
 }

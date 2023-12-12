@@ -6,7 +6,7 @@
 </head>
 <header>
     <div id="barra" class = "container" style="display: flex;" >
-        <h1> VUMBORA? </h1>
+        <a href="{% url 'vumbora:index' %}" style="text-decoration: none;"><h1> VUMBORA? </h1></a>
         <div id="pesquisa-barra-de-navegacao">
             
             <form id="test2" action="/search" method="GET">
@@ -22,17 +22,23 @@
             <button type="submit"></button>
             </form>-->
         </div>
-        <div id="filtro-localização-barra">
+        <div id="filtro-localizacao-barra">
             <button>Localização</button>
         </div>
-        <div id="Meus-eventos-barra">
-            <button>Meus Eventos</button>
+        <div id="barra-evento">
+            <a href="#" id="icone-evento"></a>
+            <div id="meus-eventos-barra">
+                <a href="#" style="text-decoration: none; color:red "> Meus Eventos</a>
+            </div>
         </div>
-        <div id="Login-barra">
-            <button>Login</button>
+        <div id="usuario-barra">
+            <a href="#" id="icone-perfil"></a>
+            <div id="Login-barra">
+                <a href="#" style="text-decoration: none; color: red;   ">Login</a>
+            </div>
         </div>
         <div id="opcoes-barra">
-            <button></button>
+            <button href="#" id="icone-barra"></button>
         </div>
     </div>
 </header>
