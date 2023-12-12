@@ -6,12 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados da sua pesquisa</title>
 </head>
-<body>
+
+<style>
+    /* Adicione estilos conforme necessário */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        margin: 20px;
+    }
+
+    h1 {
+        color: #007BFF;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: #007BFF;
+    }
+</style>
 
 <h1>Resultados da Pesquisa</h1>
 
 <form method="post" action="{% url 'pesquisar_eventos' %}">
     {{ form.as_p }}
+    {% csrf_token %}
+
     <button type="submit">Pesquisar</button>
 </form>
 
