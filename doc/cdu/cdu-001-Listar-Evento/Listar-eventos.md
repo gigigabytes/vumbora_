@@ -14,4 +14,7 @@
 ## Fluxo Alternativo
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
-| 1 - Usuário faz a busca de um evento que não contém resultados . | 2 -  Sistema exibe uma mensagem dizendo que a busca não foi atendida.
+| 1 - Usuário faz a busca de um evento que não existe. | 2 -  Sistema exibe uma mensagem dizendo que a busca não foi atendida.
+
+## Protótipo 
+![Lista Eventos](Listar-Eventos.png)

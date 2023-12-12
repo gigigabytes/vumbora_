@@ -18,3 +18,7 @@
 | 3 - Usuário preenche as informações com os dados que são pedidos previamente no formulário e clica em publicar evento.| 4a.1 Sistema verifica se todos os campos foram preenchidos e ao verificar campos vazios que o usuário deixou, retorna para o usuário o campo para ser preenchido devidamente e caso de uso segue para passo 4.|  
 |4b.1 Usuário preenche campos pendentes do formulário. | 4. Sistema finaliza caso de uso como no item 4 do Fluxo Principal.
 
+## Protótipo
+
+![Cadastro de Eventos](Cadastro-Eventos1.png)
+![Cadastro de Eventos](Cadastro-Eventos2.png)
