@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botões e estrelas */
+.button-send {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: A0B952;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  top: 67%; 
+}
+
+
+
+.checked {
+    color: orange;
+}
+
+.my-btn{
+    background-color: inherit !important;
+    border: 0 !important;
+    cursor: pointer;
+    position: relative;
+    left:38%;
+    bottom: 40%;
+
+}
+
+/* Forms e avaliações */
+
+/* Botão avaliações */
+#tittle{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8581F6;
+    border-radius: 50px;
+    height: 50px;
+    width: 10%;
+}
+
+/* Relativo as avaliações */
+.menu-op{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+}
+
+.coment-section{
+    display: inline-grid;
+    background-color: #8581F6;
+    gap: 2vw;
+    margin-left: 2vw;
+    border-radius: 50px;
+    width: 30vw;
+    height: 10vw;
+    margin-top: 3vw;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#coment-text{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+#caixa-texto{
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    position: relative;
+    bottom:35%;
+    height: 70%;
+    width: 100%;
+}
+
+/* Relativo ao form de avaliar */
+
+.form-avaliar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    margin-bottom: 3vw;
+}
+
+#form-comentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8581F6;
+    border-radius: 50px;
+    width: 60vw;
+    height: 15vw;
+
+}
+
+.form-comentario{
+    border-radius: 50px;
+    width: 90%;
+    height: 55%;
+    margin-top: 1.5vw;
+    resize: none;
+    position: relative;
+    left: 10%;
+    
+   
+}
+.form-comentario::placeholder{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+textarea{
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin: 0%;
+    text-align: center;
+    align-items: center;
+    resize: none;
+}
+
+.nota-btn{
+   margin-top: 5px;
+   padding-left: 15px;
+}
+
+
+@media only screen and (max-width: 900px){
+    
+    body{
+        display: flex;
+        align-self: start;
+        flex-direction: column;
+    }
+    
+    .coment-section{
+        width: 80vw;
+        height: 20vw;
+        position: relative;
+        left:8%;
+    }
+
+    #form-comentario{
+        width: 80vw;
+        height: 30vw;
+    }
+
+    .form-comentario{
+        width: 80%;
+        height: 55%;
+        margin-top: 1.5vw;
+        resize: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 20%;
+    }
+
+    #caixa-texto{
+        height: 70%;
+        width: 100%;
+    }
+
+    #tittle{
+        width: 20%;
+    }
+
+    .button-send{
+        width: 50%;
+    }
+
+    .my-btn{
+        left: 27%;
+        padding-left: 2%;
+    }
+
+    .nota-btn{
+       margin-top: 5px;
+       position: relative;
+       left:2%;
+    }
+
+    #coment-text{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+    }
+
+    textarea{
+        font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        margin: 0%;
+        text-align: center;
+        align-items: center;
+        resize: none;
+    }
+
+    .menu-op{
+        padding-top: 30%;
+    }
+
+    .form-avaliar{
+        padding-top: 10%;
+        margin-bottom: 8vw;
+    }
+
+    .button-send {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: A0B952;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+    }
+}    
