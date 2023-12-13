@@ -65,6 +65,7 @@ class Evento(models.Model):
         return self.nome
     def img_preview(self):
         return mark_safe(f'<img src = "{self.product_img.url}" width = "{self.product.width}" height="{self.product.height}"/>')
+    
 
 class Comenta(models.Model):
     comentario = models.CharField(max_length=200)
@@ -73,4 +74,10 @@ class Comenta(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE,null=True)
     class Meta:
         verbose_name_plural = "Comentários"
+
+class Images(models.Model):
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
+    evento = models.ForeignKey(Evento, on_delete=models.CASCADE, related_name="evento_images", null = True)
+    class Meta:
+        verbose_name_plural = "Images"
 # python -m pip install Pill
