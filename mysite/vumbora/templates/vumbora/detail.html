@@ -16,7 +16,19 @@
 </h1>
 
 <div id="imagem-evento">  <!-- lembrar de fazer o carrossel -->
-    <img src="{{ evento.get_absolute_url }}/evento.imagem" alt="Imagem do evento">
+    {% for image in event.evento_images.all %}
+    <div class="carousel-item {% if loop.first %} active {% endif %}">
+    <img src="{{ image.image.url }}" id= "imgcarosel" class="d-block w-100 img-fluid" alt="{{ image.nome }}">
+    </div>
+    {% endfor %}
+    <a class="carousel-control-prev" href="#imagem-evento" role="button" event.evento_images.all="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#imagem-evento" role="button" event.evento_images.all="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
 <div id="quesitos-evento" class="container" style="display:flex;">
@@ -69,7 +81,7 @@
     <button type="button" class="btn btn-primary rounded-pill" id="local-evento"> <strong> Local </strong> </button> 
     INFORMAÇÕES A SEREM ADICIONADAS
 </div>
-<div id="producao-evento">
-    <button type="button" class="btn btn-primary rounded-pill" id="producao-evento"> <strong> Produção </strong> </button> {{ evento.user }}
+<div id="producao">
+    <button type="button" class="btn btn-primary rounded-pill" id="producao-botao"> <strong> Produção </strong> </button> {{ evento.user }}
 </div>
 </body>

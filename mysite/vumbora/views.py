@@ -13,6 +13,7 @@ def details(request, evento_id):
     evento = get_object_or_404(Evento, pk=evento_id)
     context = {
         'evento': evento,
-        'arte_url': evento.arte.url if evento.arte else None
+        'arte_url': evento.arte.url if evento.arte else None,
+        'event' : Evento.objects.get(pk=evento.pk),
     }
     return render(request, 'vumbora/detail.html', context)

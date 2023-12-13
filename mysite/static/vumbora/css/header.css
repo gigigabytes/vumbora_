@@ -1,13 +1,14 @@
 @font-face {
     font-family: 'Asteristico';
     src:
-         url('Asteristico.ttf') format('ttf'),
+         local(Asteristico) url(/mysite/static/vumbora/css/Asteristico.ttf);
   }
 #barra{
     width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+    margin-bottom: 40px;
 }
 #procura{
     border: 5px;
@@ -26,6 +27,12 @@
 h1{
     font-family: 'Asteristico';
 }
+#botao-loc{
+    background-color: #f2f4ff;
+    color:red;
+    border-color: transparent;
+    
+}
 #barra-evento{
     display: flex;
 }
@@ -35,6 +42,10 @@ h1{
     height: 35px;
     background-size: cover;
 }
+#meus-eventos-barra{
+    margin-top: 5px;
+    margin-left: 8px;
+}
 #usuario-barra{
     display: flex;
 }
@@ -43,6 +54,10 @@ h1{
     width: 35px;
     height: 35px;
     background-size: cover;
+}
+#login-barra{
+    margin-top: 5px;
+    margin-left: 8px;
 }
 #icone-barra{
     background-image: url("menu.jpg");
