@@ -24,7 +24,6 @@ class Bairro(models.Model):
         ('ZL', 'Zona Leste'),
         ('ZO', 'Zona Oeste')
     ])
-    foto = models.ImageField(upload_to='images/', null=True, blank=True)
     def __str__(self):
         return self.nome
 
