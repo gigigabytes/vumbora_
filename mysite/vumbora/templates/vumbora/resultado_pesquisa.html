@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados da sua pesquisa</title>
 </head>
-<body>
 
 <h1>Resultados da Pesquisa</h1>
 
@@ -18,7 +17,7 @@
 
 {% for evento in eventos %}
     <h2>{{ evento.nome }}</h2>
-    <p>{{ evento.descricao }} - {{ evento.local.nome }}</p>
+    <!-- <p>{{ evento.descricao }} - {{ evento.local.nome }}</p> -->
 {% endfor %}
 
 </body>
