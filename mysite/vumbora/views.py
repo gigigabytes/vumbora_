@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
 from datetime import datetime, timedelta
+from django.http import HttpResponseRedirect, JsonResponse
+from django.urls import reverse
+
 
 # Create your views here.
 def index (request):
@@ -14,17 +17,22 @@ def index (request):
 def avaliacao(request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
-    form = AvaliacaoForm()
+
     if request.method == 'GET':
-        return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
-    if request.method == "POST":
+        form = AvaliacaoForm()
+        return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
+    elif request.method == 'POST':
+        print(request.POST)
         form = AvaliacaoForm(request.POST)
         if form.is_valid():
-            avaliacao = form.save()
+            nova_avaliacao = form.save(commit=False)
             # avaliacao.usuario = request.user
-            avaliacao.evento = evento
-            avaliacao.save()
-            return render(request,'vumbora/avaliacao.html',{'evento':evento,'avaliacoes':avaliacoes, 'form':form})
+            nova_avaliacao.evento = evento
+            nova_avaliacao.save()
+            # return JsonResponse({'success': True})
+            return HttpResponseRedirect(reverse('vumbora:avaliacao', args=(evento.id,)))
+        else:
+            return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
             
 
 def details (request, evento_id):
@@ -43,5 +51,4 @@ def eventos_na_semana(request):
 
     # Renderiza o template com os eventos
     return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
-
 
