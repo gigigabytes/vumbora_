@@ -42,9 +42,9 @@ O Sympla, Outgo, Gandaya e Ingresse seriam alternativas concorrentes que disponi
 
 7. **Visão geral do produto:**
 
-O projeto Vumbora?, trata-se de um um sistema onde possibilitará divulgações de eventos na cidade Natal/RN, em um nicho, a princípio, mais restrito. Nessas divulgações, estará incluso a descrição dos eventos como: a localização, data e hora, linkagem para compra de ingresso, caso precise, e todas outras descrições necessárias para a divulgação.
+O projeto Vumbora?, trata-se de um um sistema onde possibilitará divulgações de eventos na cidade Natal/RN, em um nicho, a princípio, mais restrito. Nessas divulgações, estará incluso a descrição dos eventos como: a localização, data e hora, linkagem para compra de ingresso, caso precise, e todas outras descrições necessárias para a divulgação. Além de possibilitar que o usuário cadastrado possa também criar seu evento para para divulgarção na plataforma.
 
-O sistema terá que filtrar os eventos por sua data, tema e valor para que a procura seja facilitada. Será criada uma agenda de eventos para facilitar a visualização dos eventos desejados em diferentes formas. 
+O sistema filtrará os eventos por sua data, tema, valor e pelos eventos que irão acontecer na semana para que a procura seja facilitada. Será criada uma agenda de eventos para facilitar a visualização dos eventos desejados em diferentes formas. 
 
 Os usuários classificarão os eventos e as pessoas que os produziram para que exista um tipo de feedback para os outros usuários e as pessoas responsáveis pelos eventos. Dessa maneira, a plataforma irá se diferenciar em relação às outras pelo foco na divulgação dos eventos pertinentes para cada pessoa além de possibilitar uma historização dos pontos fortes e fracos de cada evento e pessoa que os produz. 
 

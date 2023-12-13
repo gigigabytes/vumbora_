@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils.timezone import now
-from django.utils.html import mark_safe
-
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 class Usuario(models.Model):
@@ -28,12 +27,13 @@ class Bairro(models.Model):
         return self.nome
 
 class Local(models.Model):
+    verbose_name = "Locais" 
     nome = models.CharField(max_length=200)
     bairro = models.ForeignKey(Bairro,on_delete=models.CASCADE, null=True)
     cep = models.CharField(max_length=20)
     rua= models.CharField(max_length=200)
     numero = models.CharField(max_length=4, blank = True)
-    estacionamento = models.BooleanField(default =True)
+    estacionamento = models.BooleanField(default = True)
     class Meta:
         verbose_name_plural = "Locais"
     def __str__(self):
@@ -64,9 +64,13 @@ class Evento(models.Model):
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE,null=True)
     def __str__(self):
         return self.nome
-    def img_preview(self):
-        return mark_safe(f'<img src = "{self.product_img.url}" width = "{self.product.width}" height="{self.product.height}"/>')
-    
+
+class Avaliacao(models.Model):
+    nota = models.IntegerField(default=5,blank= True,validators=[MaxValueValidator(5), MinValueValidator(1)])
+    comentario = models.CharField(max_length=200, null=True,blank=True)
+    data = models.DateTimeField(default = now)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    evento = models.ForeignKey('Evento', on_delete=models.CASCADE, null=True)    
 
 class Comenta(models.Model):
     comentario = models.CharField(max_length=200)
