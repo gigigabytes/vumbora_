@@ -83,9 +83,10 @@
     border-radius: 50px;
     width: 30vw;
     height: 10vw;
-    margin-top: 1.5vw;
+    margin-top: 3vw;
     align-items: center;
     justify-content: center;
+    
     
 }
 
@@ -114,6 +115,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 10%;
+    margin-bottom: 3vw;
 }
 
 #form-comentario{
@@ -124,19 +126,18 @@
     border-radius: 50px;
     width: 60vw;
     height: 15vw;
-    
-    
 
 }
 
 .form-comentario{
     border-radius: 50px;
-    width: 80%;
+    width: 90%;
     height: 55%;
     margin-top: 1.5vw;
     resize: none;
     position: relative;
     left: 10%;
+    
    
 }
 .form-comentario::placeholder{
@@ -159,4 +160,108 @@ textarea{
 }
 
 
+@media only screen and (max-width: 900px){
+    
+    body{
+        display: flex;
+        align-self: start;
+        flex-direction: column;
+    }
+    
+    .coment-section{
+        width: 80vw;
+        height: 20vw;
+        position: relative;
+        left:8%;
+    }
 
+    #form-comentario{
+        width: 80vw;
+        height: 30vw;
+    }
+
+    .form-comentario{
+        width: 80%;
+        height: 55%;
+        margin-top: 1.5vw;
+        resize: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 20%;
+    }
+
+    #caixa-texto{
+        height: 70%;
+        width: 100%;
+    }
+
+    #tittle{
+        width: 20%;
+    }
+
+    .button-send{
+        width: 50%;
+    }
+
+    .my-btn{
+        left: 27%;
+        padding-left: 2%;
+    }
+
+    .nota-btn{
+       margin-top: 5px;
+       position: relative;
+       left:2%;
+    }
+
+    #coment-text{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+    }
+
+    textarea{
+        font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        margin: 0%;
+        text-align: center;
+        align-items: center;
+        resize: none;
+    }
+
+    .menu-op{
+        padding-top: 30%;
+    }
+
+    .form-avaliar{
+        padding-top: 10%;
+        margin-bottom: 8vw;
+    }
+
+    .button-send {
+        align-items: center;
+        background-clip: padding-box;
+        background-color: A0B952;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+    }
+}    
