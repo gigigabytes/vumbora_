@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 /* Botões e estrelas */
 .button-send {
   align-items: center;
@@ -33,23 +32,10 @@
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  top: 67%; 
 }
 
-.button-5:hover,
-.button-5:focus {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-}
 
-.button-5:hover {
-  transform: translateY(-1px);
-}
-
-.button-5:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
-} 
 
 .checked {
     color: orange;
@@ -59,6 +45,10 @@
     background-color: inherit !important;
     border: 0 !important;
     cursor: pointer;
+    position: relative;
+    left:38%;
+    bottom: 40%;
+
 }
 
 /* Forms e avaliações */
@@ -111,6 +101,10 @@
     display: flex;
     justify-content: center;
     align-items: right;
+    position: relative;
+    bottom:35%;
+    height: 70%;
+    width: 100%;
 }
 
 /* Relativo ao form de avaliar */
@@ -130,6 +124,8 @@
     border-radius: 50px;
     width: 60vw;
     height: 15vw;
+    
+    
 
 }
 
@@ -139,6 +135,9 @@
     height: 55%;
     margin-top: 1.5vw;
     resize: none;
+    position: relative;
+    left: 10%;
+   
 }
 .form-comentario::placeholder{
     font-size: 20px;
