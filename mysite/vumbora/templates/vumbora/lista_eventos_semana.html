@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'vumbora/css/eventos_semana.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <title>Eventos Semana</title>
 </head>
 <body>
@@ -33,12 +33,14 @@
             </div>
         </div>
     </header>
+    <section >
+        <img class="carrossel" src="/media/images/carrossel.png" alt="">
+    </section>
     <div class="filtragem">
 
-        <h2> Eventos Encontrados </h2>
-
-        <form method="get" action="{% url 'vumbora:lista_eventos_semana' %}">
-            <label for="filtro_semana">Filtrar por:</label>
+        <form class="campolistagem" method="get" action="{% url 'vumbora:lista_eventos_semana' %}">
+            <h2 class="textoform"> Filtre a procura do seu evento </h2>
+            <label for="filtro_semana">Busque:</label>
             <select name="filtro_semana" id="filtro_semana">
                 <option value="evento_list" >Todos os Eventos</option>
                 <option value="eventos_semana">Eventos da Semana</option>
@@ -47,11 +49,12 @@
         </form>
         
         {% if eventos_semana and request.GET.filtro_semana == 'eventos_semana' %}
-            <div class="events-container-duplicate">
+            <h2> Eventos Encontrados </h2>
+            <div class="lista-eventos-pai">
                 {% for evento in eventos_semana %}
-                    <div class="event-item-duplicate">
+                    <div class="lista-eventos-filho">
                         {% if evento.arte %}
-                            <img class="arte" src="{{ evento.arte.url }}" alt=""><br>
+                            <img class="arteevento" src="{{ evento.arte.url }}" alt=""><br>
                         {% endif %}
                         <strong>Nome:</strong> {{ evento.nome }}<br>
                         <strong>Horário:</strong> {{ evento.datahora }}<br>

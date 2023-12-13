@@ -1,40 +1,56 @@
-img {
-    width: 50px;
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+
+.arteevento {
+    width: 100%;
     height: 100;
 }
 
+.carrossel {
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.campolistagem{
+    display: flex;
+    justify-content: center;
+}
+header, section, .filtragem{
+    margin-top: 10px;
+}
 h2{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 body {
     font-family: Arial, sans-serif;
-    max-width: 80%;
-    margin: 0 auto;
+    height: 100vh;
 }
 
-.dropdown {
-    display: inline-block;
-}
-.events-container-duplicate{
+.lista-eventos-pai{
     width: 20%px;
     margin-top: 50px;
 }
-.events-container, .events-container-duplicate {
+.lista-eventos-pai {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    display: flex;
+    justify-content: center;
 }
 
-.event-item, .event-item-duplicate {
+ .lista-eventos-filho {
     width: 23%;
     border: 3px solid #f30909;
     box-shadow: 0 0 10px red;
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
-
 }
-.arte {
+.arteevento {
     width: 100%;
 }
