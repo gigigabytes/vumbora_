@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Asteristico';
+    src: url('Asteristico.otf') format('otf'),
+         url('Asteristico.ttf') format('ttf'),
+  }
+
+h1{
+    color:red;
+}
+
+#nome-evento{
+    text-align: center;
+    /* width: fit-content; */
+}
+
+#imagem-evento{
+    width: 100%;
+    height: 25%;
+    margin: 20px;
+}
+
+#quesitos-evento{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+#descricao-evento{
+    color: black;
+    background-color: #ef8368;
+}
+#avaliacao-evento{
+    color: black;
+    background-color: #3d37f1;
+}
+#perguntas-evento{
+    color: black;
+    background-color: #ffa14a;
+}
+#todas-informaçoes {
+    display: flex;
+}
+#detalhes{
+    background-color: #ef8368;
+    width: 55%;
+    border-radius: 10px;
+    margin:  20px;
+    padding-left: 10px;
+}
+#extras{
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    width: 40%;
+    padding-left: 10%;
+}
+#arte-evento{
+   order: -1;
+   padding-left: 10%;
+}
+#arte-evento img{
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+}
+
+#informacoes-adicionais-evento{
+    margin-top: 10px;
+    background-color: #ef8368;
+    height: 50%;
+    margin: 20px;
+    border-radius: 10px;
+    padding-left: 10%;
+}
+
+#evento-local{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+#local-evento{
+    text-align: center;
+    color: black;
+    background-color: #11cb45;
+    margin-bottom: 10px;
+}
+
+#producao-evento{
+    color: black;
+    background-color: #959595;
+    text-align: center;
+}
