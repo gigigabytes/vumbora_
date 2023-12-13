@@ -53,7 +53,7 @@ class Evento(models.Model):
         return self.nome
 
 class Avaliacao(models.Model):
-    nota = models.IntegerField(default=0,validators=[MaxValueValidator(5), MinValueValidator(1)])
+    nota = models.IntegerField(default=5,blank= True,validators=[MaxValueValidator(5), MinValueValidator(1)])
     comentario = models.CharField(max_length=200, null=True,blank=True)
     data = models.DateTimeField(default = now)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
