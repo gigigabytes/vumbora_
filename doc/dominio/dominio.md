@@ -1,4 +1,4 @@
 # Modelo de Domínio
 
-![Page Principal](Diagrama_de_dominio.png)
+![Page Principal](diagrama_de_dominio.png)
 
