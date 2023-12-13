@@ -10,8 +10,9 @@
 
 <h1>Resultados da Pesquisa</h1>
 
-<form method="get" action="{% url 'pesquisar_eventos' %}">
+<form method="post" action="{% url 'vumbora:pesquisar_eventos' %}">
     {{ form.as_p }}
+    {% csrf_token %}
     <button type="submit">Pesquisar</button>
 </form>
 
