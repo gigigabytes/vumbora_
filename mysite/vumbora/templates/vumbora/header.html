@@ -6,7 +6,7 @@
 </head>
 <header>
     <div id="barra" class = "container" style="display: flex;" >
-        <a href="{% url 'vumbora:index' %}" style="text-decoration: none;"><h1> VUMBORA? </h1></a>
+        <a href="{% url 'vumbora:index' %}" style="text-decoration: none;"><h1 style="font-family: Asteristico;"> VUMBORA? </h1></a>
         <div id="pesquisa-barra-de-navegacao">
             
             <form id="form" action="/search" method="GET">
@@ -15,12 +15,6 @@
                 <button type="submit" class="btn btn-primary rounded-pill" style="width: fit-content;" id="icone-pesquisa"><i class="fas fa-search"></i></button>
                 </div>
             </form>
-
-            <!-- <input class="form-control rounded-pill" type="text" placeholder="Busque eventos..."> -->
-            <!-- <form action="#">
-            <input type="text" name="search" placeholder="Busque eventos...">
-            <button type="submit"></button>
-            </form>-->
         </div>
         <div id="filtro-localizacao-barra">
             <button class="btn btn-primary rounded-pill" id="botao-loc">Localização</button>
