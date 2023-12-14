@@ -19,6 +19,23 @@
 <h1 id="nome-evento">
     {{ evento.nome }}
 </h1>
+{% load static%}
+        <div class="info">
+            <p>
+                <strong>Descrição:</strong> {{ evento.descricao }}
+            </p>
+            <p>
+                <strong>Local:</strong> {{ evento.local }}
+            </p>
+            <p>
+                <strong>Data:</strong> {{ evento.datahora }}
+            </p>
+            <p>
+                <strong>Preço:</strong> R${{ evento.valor }}
+            </p>
+            <p> {{evento.usuario}}</p>
+            
+        </div> 
 
 <div id="imagem-evento">  
     <a id= "prevButton" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

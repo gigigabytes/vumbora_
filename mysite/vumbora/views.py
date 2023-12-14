@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
+from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 
@@ -41,3 +42,18 @@ def avaliacao(request, evento_id):
             return HttpResponseRedirect(reverse('vumbora:avaliacao', args=(evento.id,)))
         else:
             return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
+            
+
+def eventos_na_semana(request):
+     # Lógica para filtrar eventos da semana, se aplicável
+    hoje = datetime.now()
+    inicio_semana = hoje - timedelta(days=hoje.weekday())
+    fim_semana = inicio_semana + timedelta(days=6)
+    eventos_semana = Evento.objects.filter(datahora__range=[inicio_semana, fim_semana])
+
+    # Adicione uma mensagem se não houver eventos
+    mensagem_sem_eventos = "Não há eventos a serem realizados nesta semana." if not eventos_semana else None
+
+    # Renderiza o template com os eventos
+    return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
+
