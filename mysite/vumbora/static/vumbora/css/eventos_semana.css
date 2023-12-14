@@ -1,0 +1,57 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+
+.arteevento {
+    width: 100%;
+    height: 100;
+}
+
+.carrossel {
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.campolistagem{
+    display: flex;
+    justify-content: center;
+}
+header, section, .filtragem{
+    margin-top: 10px;
+}
+.msgbusca{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.lista-eventos-pai{
+    width: 20%px;
+    margin-top: 50px;
+}
+.lista-eventos-pai {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+}
+
+ .lista-eventos-filho {
+    width: 23%;
+    border: 3px solid #f30909;
+    box-shadow: 0 0 10px red;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.arteevento {
+    width: 100%;
+}
