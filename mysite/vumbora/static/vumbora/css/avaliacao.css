@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+h1{
+    text-align: center;
+    color: blue;
+}
 /* Botões e estrelas */
 .button-send {
   align-items: center;
