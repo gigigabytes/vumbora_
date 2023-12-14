@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da sua pesquisa</title>
+</head>
+
+<h1>Resultados da Pesquisa</h1>
+
+<form method="post" action="{% url 'vumbora:pesquisar_eventos' %}">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button type="submit">Pesquisar</button>
+</form>
+
+{% for evento in eventos %}
+    <h2>{{ evento.nome }}</h2>
+    <!-- <p>{{ evento.descricao }} - {{ evento.local.nome }}</p> -->
+{% endfor %}
+
+</body>
+</html>

@@ -64,22 +64,20 @@ h1{
 #arte-evento{
    order: -1;
    padding-left: 10%;
-   margin: 20px;
 }
 #arte-evento img{
-    height: 150px;
-    width: 150px;
+    width: 50%;
+    height: 50%;
+    margin: 20px;
 }
-
 
 #informacoes-adicionais-evento{
     margin-top: 10px;
     background-color: #ef8368;
+    height: 50%;
     margin: 20px;
-    height: 100px;
-    width: max-content;
     border-radius: 10px;
-   
+    padding-left: 10%;
 }
 
 #evento-local{
@@ -106,4 +104,10 @@ h1{
     color: black;
     background-color: #959595;
     border-color: transparent;
+}
+
+#producao-evento{
+    color: black;
+    background-color: #959595;
+    text-align: center;
 }
