@@ -15,6 +15,7 @@ def index (request):
     }
     return render(request,'vumbora/index.html',context)
 
+
 ### View DETAIL
 ############
 def details (request, evento_id):
