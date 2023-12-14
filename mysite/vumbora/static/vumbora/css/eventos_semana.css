@@ -21,9 +21,10 @@
 header, section, .filtragem{
     margin-top: 10px;
 }
-h2{
+.msgbusca{
     display: flex;
     justify-content: center;
+    margin-top: 55px;
 }
 
 body {
