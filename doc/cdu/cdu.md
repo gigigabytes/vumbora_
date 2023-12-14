@@ -11,3 +11,4 @@
 3. [CDU-003 - Cadastrar Eventos](cdu-003-Cadastro-de-Evento(F01)/Cadastrar-Evento.md)
 4. [CDU-004 - Meus Eventos Cadastrados](cdu-004-Meus-Eventos-Cadastrados(F04)/Meus-Eventos-Cadastrados.md)
 5. [CDU-005 - Avaliar Evento](cdu-005-Avaliar-Evento(F05)/cdu-005-Avaliar-Evento.md)
+6. [CDU-006 - Pesquisar Eventos](cdu-006-Pesquisar-Eventos/Pesquisar-Eventos.md)
