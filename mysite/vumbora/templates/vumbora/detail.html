@@ -21,3 +21,14 @@
     <p>
         <strong>Preço:</strong> R${{ evento.valor }}
     </p>
+    <p> {{evento.usuario}}</p>
+    
+</div> 
+
+<div>
+    <ul>
+        <li>
+           <a href="{% url 'vumbora:avaliacao' evento.id %}"> Avaliações</a>
+        </li>
+    </ul>
+</div>

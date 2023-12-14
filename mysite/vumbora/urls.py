@@ -8,5 +8,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('vumbora/<int:evento_id>/', views.details, name='details'),
     path('pesquisar_eventos/', views.pesquisar_eventos, name='pesquisar_eventos'),
-    #url está correta?
+    path('avaliacao/<int:evento_id>/', views.avaliacao, name='avaliacao')
 ]
