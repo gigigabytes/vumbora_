@@ -1,6 +1,6 @@
 {% load static %}
 
-
+{% include 'vumbora/header.html' %}
     
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
@@ -9,7 +9,7 @@
     <h1>Eventos cadastrados</h1>
     <ul>
         {% for evento in evento_list %}
-            <li><a href="{% url 'vumbora:details' evento.id %}">{{ evento.nome }}</a> </li>
+            <li><a href="{% url 'vumbora:details' evento.id %}">{{ evento.nome }}</a></li>
         {% endfor %}
 
         <a href="{% url 'vumbora:lista_eventos_semana' %}"> Listar Eventos da Semana </a>
@@ -17,4 +17,6 @@
 {% else %}
     <p>Não há eventos cadastrados.</p>
 {% endif %}
+
+<!--/vumbora/<int:evento_id>/-->
 

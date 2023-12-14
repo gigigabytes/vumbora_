@@ -1,5 +1,5 @@
+from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
-from django.shortcuts import render, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
 from datetime import datetime, timedelta
@@ -18,9 +18,14 @@ def index (request):
 
 ### View DETAIL
 ############
-def details (request, evento_id):
-    evento = Evento.objects.get(pk=evento_id)
-    return render(request,'vumbora/detail.html',{'evento':evento})
+def details(request, evento_id):
+    evento = get_object_or_404(Evento, pk=evento_id)
+    context = {
+        'evento': evento,
+        'arte_url': evento.arte.url if evento.arte else None,
+        'event' : Evento.objects.get(pk=evento.pk),
+    }
+    return render(request, 'vumbora/detail.html', context)
 
 
 class PesquisaEventoForm(forms.Form):
@@ -64,6 +69,7 @@ def avaliacao(request, evento_id):
         else:
             return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
             
+
 ### View EVENTOS na semana
 ##############
 def eventos_na_semana(request):

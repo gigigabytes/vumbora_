@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Asteristico';
-    src: url('Asteristico.otf') format('otf'),
-         url('Asteristico.ttf') format('ttf'),
+    src:
+         local(Asteristico) url(/mysite/static/vumbora/css/Asteristico.ttf);
   }
 
 h1{
@@ -18,6 +18,10 @@ h1{
     height: 25%;
     margin: 20px;
 }
+#carrossel-img{
+    width: 100%;
+    height: 50px;
+}
 
 #quesitos-evento{
     width: 100%;
@@ -28,14 +32,17 @@ h1{
 #descricao-evento{
     color: black;
     background-color: #ef8368;
+    border-color: transparent;
 }
 #avaliacao-evento{
     color: black;
     background-color: #3d37f1;
+    border-color: transparent;
 }
 #perguntas-evento{
     color: black;
     background-color: #ffa14a;
+    border-color: transparent;
 }
 #todas-informaçoes {
     display: flex;
@@ -84,6 +91,19 @@ h1{
     color: black;
     background-color: #11cb45;
     margin-bottom: 10px;
+    border-color: transparent;
+}
+#producao{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#producao-botao{
+    text-align: center;
+    color: black;
+    background-color: #959595;
+    border-color: transparent;
 }
 
 #producao-evento{

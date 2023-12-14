@@ -22,7 +22,10 @@
 
 
 <body data-url="{% url 'vumbora:avaliacao' evento.id %}">
-
+    {% include 'vumbora/header.html' %}
+    <h1 id="nome-evento">
+        {{ evento.nome }}
+    </h1>
     <div class="menu-op">
         <div id="tittle">
             <p>Avaliações</p>

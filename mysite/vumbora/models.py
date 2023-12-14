@@ -39,6 +39,7 @@ class Local(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Genero(models.Model):
     genero = models.CharField(max_length=1,choices =[
         ('E', 'Exposição'),
@@ -52,7 +53,6 @@ class Genero(models.Model):
     def __str__(self):
         return self.genero
     
-
 class Evento(models.Model):
     nome = models.CharField(max_length=200)
     descricao = models.CharField(max_length=200, null=True)
@@ -61,7 +61,7 @@ class Evento(models.Model):
     local = models.ForeignKey(Local, on_delete=models.CASCADE, null=True)
     arte = models.ImageField(upload_to='images/', null=True, blank = True)
     genero = models.ManyToManyField(Genero)
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE,null=True)
     def __str__(self):
         return self.nome
 
