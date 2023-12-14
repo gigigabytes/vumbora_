@@ -1,3 +1,4 @@
+from django import forms
 from django.shortcuts import render, redirect
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
@@ -5,8 +6,8 @@ from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 
-
-# Create your views here.
+### View INDEX
+############
 def index (request):
     evento_list = Evento.objects.order_by('datahora')[:5]
     context = {
@@ -14,6 +15,35 @@ def index (request):
     }
     return render(request,'vumbora/index.html',context)
 
+
+### View DETAIL
+############
+def details (request, evento_id):
+    evento = Evento.objects.get(pk=evento_id)
+    return render(request,'vumbora/detail.html',{'evento':evento})
+
+
+class PesquisaEventoForm(forms.Form):
+    termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
+
+### View PESQUISAR Eventos
+#############
+def pesquisar_eventos(request):
+    eventos = Evento.objects.all()
+
+    if request.method == 'POST':
+        form = PesquisaEventoForm(request.POST)
+        if form.is_valid():
+            termo_pesquisa = form.cleaned_data.get('termo_pesquisa', '')
+            eventos = Evento.objects.filter(nome__icontains=termo_pesquisa)
+    else:
+        form = PesquisaEventoForm()
+
+    return render(request, 'vumbora/resultado_pesquisa.html', {'form': form, 'eventos': eventos})
+
+       
+### View AVALIAÇÃO
+##############
 def avaliacao(request, evento_id):
     evento = Evento.objects.get(pk=evento_id)
     avaliacoes = Avaliacao.objects.filter(evento_id=evento_id)
@@ -34,11 +64,8 @@ def avaliacao(request, evento_id):
         else:
             return render(request, 'vumbora/avaliacao.html', {'evento': evento, 'avaliacoes': avaliacoes, 'form': form})
             
-
-def details (request, evento_id):
-    evento = Evento.objects.get(pk=evento_id)
-    return render(request,'vumbora/detail.html',{'evento':evento})
-
+### View EVENTOS na semana
+##############
 def eventos_na_semana(request):
      # Lógica para filtrar eventos da semana, se aplicável
     hoje = datetime.now()
@@ -51,4 +78,3 @@ def eventos_na_semana(request):
 
     # Renderiza o template com os eventos
     return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
-

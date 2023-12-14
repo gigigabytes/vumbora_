@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Asteristico';
+    src:
+         url('Asteristico.ttf') format('ttf'),
+  }
+#barra{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+#procura{
+    border: 5px;
+    border-color: black;
+    display: flex;
+    align-items: center;
+}
+#icone-pesquisa{
+    background-color: transparent;
+    color: gray;
+    border-color: transparent;
+}
+#pesquisa{
+    border-color: black;
+}
+h1{
+    font-family: 'Asteristico';
+}
+#barra-evento{
+    display: flex;
+}
+#icone-evento{
+    background-image: url("evento.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+}
+#usuario-barra{
+    display: flex;
+}
+#icone-perfil{
+    background-image: url("profile.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: cover;
+}
+#icone-barra{
+    background-image: url("menu.jpg");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    border: transparent;
+    background-color: transparent;
+}
