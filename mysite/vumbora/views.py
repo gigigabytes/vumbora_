@@ -5,7 +5,7 @@ from .forms import AvaliacaoForm, PesquisaEventoForm, LoginForm,CadastroPerfilFo
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login 
 from django.contrib import messages
 
 ### View INDEX
@@ -88,7 +88,7 @@ def eventos_na_semana(request):
 
 ### View Login
 ####################
-def login(request):
+def logar(request):
     if request.method == 'GET':
         form = LoginForm()
         return render(request, 'vumbora/login.html', { 'form': form})
@@ -102,7 +102,7 @@ def login(request):
             if user is not None:
                 login(request, user)
                 messages.success(request,f'Hi {username.title()}, welcome back!')
-                return redirect('index')
+                return redirect(reverse('vumbora:index'))
             else: messages.error(request,f'Invalid username or password')
             return render(request,'vumbora/login.html',{'form': form})
 ###
@@ -119,6 +119,6 @@ def cadastro_perfil(request):
             user.save()
             messages.success(request, 'You have singed up successfully.')
             login(request, user)
-            return redirect('index')
+            return redirect(reverse('vumbora:index'))
         else:
             return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
