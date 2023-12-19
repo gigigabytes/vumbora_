@@ -1,9 +1,12 @@
 from django.db import models
 from django.utils.timezone import now
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
 # Create your models here.
 class Usuario(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     tipo = models.CharField(max_length=1,default = 'F' ,choices=[

@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
-from .models import Evento, Usuario,Avaliacao
-from .forms import AvaliacaoForm
+from .models import Evento, Usuario, Avaliacao
+from .forms import AvaliacaoForm, PesquisaEventoForm, LoginForm,CadastroPerfilForm 
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 
 ### View INDEX
 ############
@@ -26,7 +28,6 @@ def details(request, evento_id):
         'event' : Evento.objects.get(pk=evento.pk),
     }
     return render(request, 'vumbora/detail.html', context)
-
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
@@ -84,3 +85,40 @@ def eventos_na_semana(request):
 
     # Renderiza o template com os eventos
     return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
+
+### View Login
+####################
+def login(request):
+    if request.method == 'GET':
+        form = LoginForm()
+        return render(request, 'vumbora/login.html', { 'form': form})
+    elif request.method == 'POST':
+        form = LoginForm(request.POST)
+        
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request,username=username,password=password)
+            if user is not None:
+                login(request, user)
+                messages.success(request,f'Hi {username.title()}, welcome back!')
+                return redirect('index')
+            else: messages.error(request,f'Invalid username or password')
+            return render(request,'vumbora/login.html',{'form': form})
+###
+###################        
+def cadastro_perfil(request):
+    if request.method == 'GET':
+        form = CadastroPerfilForm()
+        return render(request, 'vumbora/cadastro_perfil.html', { 'form': form})
+    if request.method == 'POST':
+        form = CadastroPerfilForm(request.POST) 
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            messages.success(request, 'You have singed up successfully.')
+            login(request, user)
+            return redirect('index')
+        else:
+            return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
