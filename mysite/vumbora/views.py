@@ -1,12 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
-from .models import Evento, Usuario, Avaliacao
-from .forms import AvaliacaoForm, PesquisaEventoForm, LoginForm,CadastroPerfilForm 
+from .models import Evento, Avaliacao
+from .forms import AvaliacaoForm, PesquisaEventoForm, LoginForm, UsuarioForm
 from datetime import datetime, timedelta
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.contrib.auth import authenticate, login 
-from django.contrib import messages
+from .services import CadastrarPerfilService, LogarService
+from django.views import View
+from django.urls import reverse
 
 ### View INDEX
 ############
@@ -88,37 +89,29 @@ def eventos_na_semana(request):
 
 ### View Login
 ####################
+
 def logar(request):
     if request.method == 'GET':
         form = LoginForm()
         return render(request, 'vumbora/login.html', { 'form': form})
     elif request.method == 'POST':
-        form = LoginForm(request.POST)
-        
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(request,username=username,password=password)
-            if user is not None:
-                login(request, user)
-                messages.success(request,f'Hi {username.title()}, welcome back!')
-                return redirect(reverse('vumbora:index'))
-            else: messages.error(request,f'Invalid username or password')
+        ls = LogarService()
+        if ls(request):
+            return redirect(reverse('vumbora:index'))
+        else: 
             return render(request,'vumbora/login.html',{'form': form})
-###
+            
+### View Cadastrar Perfil
 ###################        
-def cadastro_perfil(request):
+    
+def cadastrar_perfil(request):
     if request.method == 'GET':
-        form = CadastroPerfilForm()
+        form = UsuarioForm()
         return render(request, 'vumbora/cadastro_perfil.html', { 'form': form})
     if request.method == 'POST':
-        form = CadastroPerfilForm(request.POST) 
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.username = user.username.lower()
-            user.save()
-            messages.success(request, 'You have singed up successfully.')
-            login(request, user)
+        cps = CadastrarPerfilService()
+        if cps.cadastrar_perfil(request):
             return redirect(reverse('vumbora:index'))
         else:
+            form = UsuarioForm(request.POST)
             return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
