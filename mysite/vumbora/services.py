@@ -10,6 +10,15 @@ class CadastrarPerfilService:
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
+
+            usuario = Usuario.objects.create(
+            user=user,
+            nome=form.cleaned_data['nome'],
+            tipo=form.cleaned_data['tipo'],
+            identidade=form.cleaned_data['identidade'],
+            foto=form.cleaned_data['foto'],
+            email = form.cleaned_data['email']
+        )
             
             messages.success(request, 'You have singed up successfully.')
             login(request, user)

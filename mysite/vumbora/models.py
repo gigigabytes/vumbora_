@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate
 class Usuario(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
+    email = models.EmailField(max_length=200, unique=True)
     tipo = models.CharField(max_length=1,default = 'F' ,choices=[
         ('F', 'Física'),
         ('J', 'Jurídica')

@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Usuario
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
@@ -20,7 +21,14 @@ class LoginForm(forms.Form):
     
 
 class UsuarioForm(UserCreationForm):
+    tipo = forms.ChoiceField(choices=[
+        ('F', 'Física'),
+        ('J', 'Jurídica')
+    ])
+    identidade = forms.CharField(max_length=14)
+    foto = forms.ImageField(required=False)
+    nome = forms.CharField(max_length=200)
     class Meta:
         model=User
-        fields = ['username','email','password1','password2']
+        fields = ['username','email','password1','password2','nome', 'tipo', 'identidade', 'foto']
 
