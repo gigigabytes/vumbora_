@@ -11,7 +11,7 @@
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: |
 |1-Usuário clica botão avaliação.
- || 2-O sistema mostra a págima referente a avaliações.
+ || 2-O sistema mostra a página referente a avaliações.
  || 3-Na página de avaliações, o sistema mostra a opção de avaliação com valor de 1 a 5 estrelas.||
  4-Usuário seleciona a quantidade de estrelas.
  || 5-O sistema salva a avaliação e mostra uma mensagem de sucesso.|
