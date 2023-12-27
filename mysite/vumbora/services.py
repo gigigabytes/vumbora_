@@ -35,7 +35,7 @@ class LogarService:
             user = authenticate(request,username=username,password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request,f'Hi {username.title()}, welcome back!')
+                messages.success(request,f'Hi {user.get_username()}, welcome back!')
                 return True
             else:
                 messages.error(request,f'Invalid username or password') 
