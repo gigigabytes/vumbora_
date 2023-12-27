@@ -99,6 +99,7 @@ def logar(request):
         if ls.Logar(request):
             return redirect(reverse('vumbora:index'))
         else: 
+            form = LoginForm()
             return render(request,'vumbora/login.html',{'form': form})
             
 ### View Cadastrar Perfil
