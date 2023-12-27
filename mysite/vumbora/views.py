@@ -96,7 +96,7 @@ def logar(request):
         return render(request, 'vumbora/login.html', { 'form': form})
     elif request.method == 'POST':
         ls = LogarService()
-        if ls(request):
+        if ls.Logar(request):
             return redirect(reverse('vumbora:index'))
         else: 
             return render(request,'vumbora/login.html',{'form': form})
