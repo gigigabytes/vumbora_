@@ -5,7 +5,7 @@ const three = document.getElementById('third')
 const four = document.getElementById('fourth')
 const five = document.getElementById('fifth')
 
-const form = document.querySelector('form')
+const form = document.getElementById('f-avaliar')
 const confirmbox = document.getElementById('confirm-box')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
 const url = document.body.getAttribute('data-url')
