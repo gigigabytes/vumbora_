@@ -1,8 +1,14 @@
+{% load static %}
+
+{% include 'vumbora/header.html' %}
+    
+<link rel="stylesheet" href="{% static 'css/cadastro_perfil.css' %}">
+
 <form method="POST" novalidate>
 	{% csrf_token %}
-	<h2>Sign Up</h2>
+	<h2>Cadastrar Perfil</h2>
 	{% for field in form %}
-	<p>
+	<p id="formulario_cadastro">
 		{% if field.errors %}
 		<ul class="errorlist">
 			{% for error in field.errors %}
@@ -10,8 +16,12 @@
 			{% endfor %}
 		</ul>
 		{% endif %}
-	 	{{ field.label_tag }} {{ field }}
+	 	{{ field.label_tag }}<br>
+		{{ field }}
 	</p>
-	{% endfor %}	
-	<input type="submit" value="Cadastrar Perfil" />
+	{% endfor %}
+	<br>
+	<div id="botao_cadastrar">	
+	<input  type="submit" value="Cadastrar Perfil" />
+	</div>
 </form>

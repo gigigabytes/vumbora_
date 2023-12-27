@@ -28,7 +28,12 @@
         <div id="usuario-barra">
             <a href="{% url 'vumbora:cadastrar_perfil' %}" id="icone-perfil"></a>
             <div id="login-barra">
+                {% if user.is_authenticated %}
+                <a href="{% url 'vumbora:logar' %}" style="text-decoration: none; color: red;">
+                    {{ user.username }}</a>
+                {% else %}
                 <a href="{% url 'vumbora:logar' %}" style="text-decoration: none; color: red;   ">Login</a>
+                {% endif %}
             </div>
         </div>
         <div id="opcoes-barra">
