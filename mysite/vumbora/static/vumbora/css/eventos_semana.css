@@ -1,57 +1,184 @@
 * {
     margin: 0 auto;
     box-sizing: border-box;
-    
+    padding: 0;
 }
 
-.arteevento {
-    width: 100%;
-    height: 100;
-}
-
-.carrossel {
-    width: 100vh;
-    display: flex;
-    justify-content: center;
-}
 .campolistagem{
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
-header, section, .filtragem{
-    margin-top: 10px;
-}
+
 .msgbusca{
     display: flex;
     justify-content: center;
     margin-top: 55px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
+.lista-eventos-pai {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-row-gap: 20px;
+    margin: 20px;
 }
 
-.lista-eventos-pai{
-    width: 20%px;
-    margin-top: 50px;
+
+ /* _______________________________ */
+
+ .card{
+    width: 310px;
+    height: 320px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ }
+
+ .card img {
+    border: 0;
+    width: 100%;	
+    height: 20vh;
+    border-radius: 6px 6px 0 0;
+    padding-bottom: 2px;
 }
-.lista-eventos-pai {
+
+.titulo {
+    font-style: bold;
+    font-size: 20px;
+    font-family: 'DM Sans', sans-serif, bold;
+    position: relative;
+    right: 20px;
+    
+}
+
+.content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    display: flex;
+    margin-top: 10px;
+}
+
+.data {
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    right: 70px;
+}
+
+.artista {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
     justify-content: center;
 }
 
- .lista-eventos-filho {
-    width: 23%;
-    border: 3px solid #f30909;
-    box-shadow: 0 0 10px red;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
+.ver-mais {
+    font-style: bold;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-color: black;
+    font-family: 'DM Sans', sans-serif;
+    width: 120px;
+    height: 46px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    align-items: center;
+    border: 2px solid black;
+    margin-top: 7px;
 }
-.arteevento {
-    width: 100%;
+
+.ver-mais:hover {
+    background-color: orange;
+    color: white;
+    transition: 0.5s;
+}
+
+.local-horario {
+    padding-top: 19px;
+    font-family: 'DM Sans', sans-serif;
+    color: gray;
+    font-size: small;
+}
+
+
+@media (max-width: 1200px) {
+    .lista-eventos-pai {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card img{
+        width: 100%;
+        height: 25vh;
+    }
+
+    .ver-mais{
+        margin-top: 12px;
+    }
+
+    .local-horario{
+        padding-top: 5px;
+    }
+    .artista{
+        position: relative;
+        bottom: 10px;
+    }
+    
+}
+
+@media (max-width:900px){
+    .lista-eventos-pai {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap:40px ;
+    }
+    .card img{
+        width: 100%;
+        height: 25vh;
+    }
+    .ver-mais{
+        margin-top: 12px;
+    }
+    .local-horario{
+        padding-top: 5px;
+    }
+    .artista{
+        position: relative;
+        bottom: 10px;
+    }
+
+}
+
+@media (max-width: 620px) {
+    .lista-eventos-pai {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 40px;
+        margin-left: 25%;
+    }
+    .card img{
+        width: 100%;
+        height: 25vh;
+    }
+
+    .ver-mais{
+        margin-top: 12px;
+    }
+
+    .titulo{
+        margin-top: 10px;
+    }
+
+    .local-data{
+        padding-top: 10px;
+    }
+    
+    .artista{
+        position: relative;
+        bottom: 10px;
+    }
 }
