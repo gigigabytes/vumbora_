@@ -17,6 +17,10 @@
 {% else %}
     <p>Não há eventos cadastrados.</p>
 {% endif %}
+{% if user.is_authenticated %}
+    | Logado como: {{ user.username }}
+{% endif %}
+
 
 <!--/vumbora/<int:evento_id>/-->
 
