@@ -1,5 +1,4 @@
 from django import forms
-from .models import Evento 
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
@@ -12,8 +11,3 @@ class AvaliacaoForm(forms.ModelForm):
         widgets = {
             'comentario': forms.Textarea(attrs={'class': 'form-comentario', 'placeholder': 'Comentário', 'id': 'id_comentario'}),
         }
-
-class EventoCadastro(forms.ModelForm):
-    class Meta:
-        model = Evento
-        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero',]
