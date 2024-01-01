@@ -20,19 +20,53 @@
     <div class="filtragem">
 
         <form class="campolistagem" method="get" action="{% url 'vumbora:lista_eventos_semana' %}">
-            <h2 class="textoform"> Escolha uma opção de busca: </h2>
+            <!-- <h2 class="textoform"> Escolha uma opção de busca: </h2>
             <div class = "filtros">
                 <label for="filtro_semana">Busque:</label>
                 <select name="filtro_semana" id="filtro_semana">
                     <option value="evento_list" >Todos os Eventos</option>
                     <option value="eventos_semana">Eventos da Semana</option>
                 </select>
+            </div> -->
+            
+            <div class = "filtros-pesquisa">
+                <label for="tipo_evento"></label>
+            <select id="tipo">
+                <option value="1">Tipo</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+            
+            <label for="zona_evento"></label>
+            <select id="tipo">
+                <option value="1">Zona</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+            
+            <label for="valor_evento"></label>
+            <select id="tipo">
+                <option value="1">Valor</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+
+            <label for="data_evento"></label>
+            <select name="filtro_semana" id="filtro_semana">
+                <option>Data</option>
+                <option value="evento_list" >Todos os Eventos</option>
+                <option value="eventos_semana">Eventos da Semana</option>
+            </select>
+            <input class="button-filtro" type="submit" value="Buscar">    
             </div>
-            <input type="submit" value="Filtrar">
         </form>
-        
+    </div>    
+    <div class = "resultado-filtragem">   
         {% if eventos_semana and request.GET.filtro_semana == 'eventos_semana' %}
-            <h2 class="msgbusca"> Eventos Encontrados </h2>
+            <h2 class="msgbusca"> Eventos da semana </h2>
             <div class="lista-eventos-pai">
                 {% for evento in eventos_semana %}
                 <div class="all">
@@ -50,8 +84,14 @@
                             <p class="data">{{evento.datahora|date:"M"}} <br><strong>{{evento.datahora.day}}</strong></p>
                             <p class="titulo">{{evento.nome}}</p>
                         </div>
-                        <p class="artista">Algo a adicionar</p>
-                        <p class="local-horario">{{evento.local}} - {{evento.datahora.hour}}:{{evento.datahora.minute|stringformat:"02d"}}</p>
+                        <p class="descricao">{% if evento.descricao|length > 30 %} {{ evento.descricao|slice:":30" }}...{% else %}{{ evento.descricao }}{% endif %}</p>
+                        <div class ="informacoes">
+                            <p class="local-horario">{{evento.local}} - {{evento.datahora.hour}}:{{evento.datahora.minute|stringformat:"02d"}}</p>
+                            <p class="ingresso" > 
+                                {% if evento.valor == 0 %} Evento gratuito 
+                                {% else %} Ingressos a partir de R${{evento.valor}} Reais 
+                                {% endif %}</p>
+                        </div>
                         <a href="{% url 'vumbora:details' evento.id %}"  rel="noopener noreferrer" class="ver-mais">Ver Mais</a>
                     </div>
                 </div>

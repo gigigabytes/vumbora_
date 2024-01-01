@@ -4,15 +4,47 @@
     padding: 0;
 }
 
+.filtragem select{   
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 50px;
+    background-color: #F2F4FF;
+    border:none;
+    height: 35px;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button-filtro{
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 50px;
+    height: 35px;
+    width: 120px;
+    background-color: #FFA14A;
+    border:none;
+}
+
+.button-filtro:hover{
+    background-color: #FFA14A;
+    color: white;
+    transition: 0.5s;
+}
+
 .campolistagem{
     display: flex;
-    justify-content: left;
+    margin-left: 30%;
+    margin-top: 20%;
 }
 
 .msgbusca{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 55px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    color:gray;
 }
 
 .lista-eventos-pai {
@@ -44,6 +76,7 @@
     height: 20vh;
     border-radius: 6px 6px 0 0;
     padding-bottom: 2px;
+    max-height: fit-content;
 }
 
 .titulo {
@@ -66,10 +99,16 @@
     right: 70px;
 }
 
-.artista {
+.descricao {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     justify-content: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .ver-mais {
@@ -88,7 +127,6 @@
     border-radius: 30px;
     align-items: center;
     border: 2px solid black;
-    margin-top: 7px;
 }
 
 .ver-mais:hover {
@@ -97,12 +135,19 @@
     transition: 0.5s;
 }
 
-.local-horario {
-    padding-top: 19px;
+.informacoes {
     font-family: 'DM Sans', sans-serif;
     color: gray;
     font-size: small;
+    justify-content: center;
 }
+
+.local-horario{
+    display: flex;
+    justify-content: center;
+    
+}
+
 
 
 @media (max-width: 1200px) {
