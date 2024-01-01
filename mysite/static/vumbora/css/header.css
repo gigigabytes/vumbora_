@@ -3,12 +3,17 @@
     src:
          local(Asteristico) url(/mysite/static/vumbora/css/Asteristico.ttf);
   }
+
 #barra{
     width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
     margin-bottom: 40px;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
 }
 #procura{
     border: 5px;

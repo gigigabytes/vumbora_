@@ -11,16 +11,14 @@
 </head>
 
 <body>
-    {% include 'vumbora/header.html' %}
-    <p class = "pag-titulo">
-        <h1>Resultados da Pesquisa</h1>
-    </p>
+    <div>
+        {% include 'vumbora/header.html' %}
+    </div>
+    
+    <!-- <p class="pag-titulo">
+    <h1>Resultados da Pesquisa</h1>
+    </p> -->
 
-    <form method="post" action=" {% url 'vumbora:pesquisar_eventos' %}">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <button type="submit">Pesquisar</button>
-    </form>
 
     {% if eventos %}
     {% for evento in eventos %}
@@ -51,6 +49,7 @@
     <h2>Nenhum evento encontrado</h2>
     </p>
     {% endif %}
+
 </body>
 
 </html>
