@@ -1,18 +1,56 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vumbora/css/resultado_pesquisa.css' %}">
     <title>Resultados da sua pesquisa</title>
 </head>
-{% include 'vumbora/header.html' %}
-<h1>Resultados da Pesquisa</h1>
 
+<body>
+    {% include 'vumbora/header.html' %}
+    <p class = "pag-titulo">
+        <h1>Resultados da Pesquisa</h1>
+    </p>
 
-{% for evento in eventos %}
-    <a href="{% url 'vumbora:details' evento.id %}"><h2>{{ evento.nome }}</h2></a>
-{% endfor %}
+    <form method="post" action=" {% url 'vumbora:pesquisar_eventos' %}">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Pesquisar</button>
+    </form>
 
+    {% if eventos %}
+    {% for evento in eventos %}
+    <div class="all">
+        <div class="card">
+            {% if evento.arte%}
+            <div class="img">
+                <img src="{{evento.arte.url}}">
+            </div>
+            {%else%}
+            <div class="img">
+                <img src="https://v0.betalabs.cloud/ecommerce/lifebike/img/unavailable.jpg">
+            </div>
+            {%endif%}
+            <div class="content">
+                <p class="data">{{evento.datahora|date:"M"}} <br><strong>{{evento.datahora.day}}</strong></p>
+                <p class="titulo">{{evento.nome}}</p>
+            </div>
+            <p class="artista">Algo a adicionar</p>
+            <p class="local-horario">{{evento.local}} -
+                {{evento.datahora.hour}}:{{evento.datahora.minute|stringformat:"02d"}}</p>
+            <a href="{% url 'vumbora:details' evento.id %}" rel="noopener noreferrer" class="ver-mais">Ver Mais</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="pag-titulo">
+    <h2>Nenhum evento encontrado</h2>
+    </p>
+    {% endif %}
 </body>
+
 </html>

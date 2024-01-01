@@ -1,8 +1,9 @@
 from django import forms
+from .models import Avaliacao
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
-from .models import Avaliacao
+
 
 class AvaliacaoForm(forms.ModelForm):
     class Meta:
