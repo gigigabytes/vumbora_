@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
 from .models import Evento, Usuario,Avaliacao
 from .forms import AvaliacaoForm
+from .forms import EventoCadastro 
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
@@ -84,3 +85,15 @@ def eventos_na_semana(request):
 
     # Renderiza o template com os eventos
     return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
+
+
+def cadastrar_evento(request):
+    if request.method == 'POST':
+        form = EventoCadastro(request.POST, request.FILES)
+        if form.is_valid():
+
+            return redirect('pagina_detalhes_evento')
+    else:
+        form = EventoCadastro()
+
+    return render(request, 'cadastrar_evento.html', {'form': form})
