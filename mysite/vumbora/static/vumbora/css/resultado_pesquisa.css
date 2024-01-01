@@ -6,14 +6,6 @@
     margin: 20px;
 }
 
-.artista {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
-    justify-content: center;
-    position: relative;
-    bottom: 10px;
-}
-
 .card {
     align-items: center;
     border-radius: 10px;
@@ -110,17 +102,13 @@
 }
 
 @media (max-width: 1200px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
-
+   
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -135,17 +123,13 @@
 }
 
 @media (max-width: 900px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
 
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-row-gap: 40px;
         grid-template-columns: repeat(2, 1fr);
@@ -161,17 +145,12 @@
 }
 
 @media (max-width: 620px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
-
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-row-gap: 40px;
         grid-template-columns: repeat(1, 1fr);
