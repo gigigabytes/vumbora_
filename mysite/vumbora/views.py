@@ -118,6 +118,9 @@ def cadastrar_perfil(request):
             return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
 
 
+### View Cadastrar Evento
+###################
+             
 def cadastrar_evento(request):
     if request.method == 'POST':
         form = EventoCadastro(request.POST, request.FILES)
