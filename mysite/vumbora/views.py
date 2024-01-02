@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
 from .models import Evento, Usuario,Avaliacao
-from .forms import AvaliacaoForm
+from .forms import AvaliacaoForm, UsuarioForm, UserCreationForm
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect
 from django.urls import reverse

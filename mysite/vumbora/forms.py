@@ -1,6 +1,7 @@
 from django import forms
-from .models import Evento
-
+from .models import Evento, Usuario
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
