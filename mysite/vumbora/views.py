@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
 from .models import Evento, Usuario,Avaliacao
-from .forms import AvaliacaoForm, UsuarioForm, UserCreationForm
+from .forms import AvaliacaoForm, UsuarioForm, UserCreationForm, EventoCadastro, LoginForm
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .services import CadastrarPerfilService, LogarService
+from .services import CadastrarPerfilService, LogarService, CadastrarEventoService
 from django.views import View
 from django.urls import reverse
 
@@ -123,11 +123,10 @@ def cadastrar_perfil(request):
              
 def cadastrar_evento(request):
     if request.method == 'POST':
-        form = EventoCadastro(request.POST, request.FILES)
-        if form.is_valid():
-
-            return redirect('index')
+        service = CadastrarEventoService()
+        deu_certo = service.cadastrar_evento(request)
+        if deu_certo:
+            return redirect('vumbora:index')
     else:
         form = EventoCadastro()
-
-    return render(request, 'index', {'form': form})
+    return render(request, 'vumbora/cadastrar_evento.html', {'form': form})

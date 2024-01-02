@@ -51,12 +51,12 @@ class CadastrarEventoService:
         form = EventoCadastro(request.POST, request.FILES)
         if form.is_valid():
             evento = form.save(commit=False)
-
-            evento.usuario = request.user 
+            evento.usuario = request.user.usuario 
             evento.save()
+            form.save_m2m()
 
             messages.success(request, 'Evento cadastrado com sucesso.')
-            return redirect('index', evento_id=evento.id)
+            return True
         else:
             messages.error(request, 'Erro ao cadastrar evento. Verifique os campos.')
-            return render(request, 'cadastrar_evento.html', {'form': form})
+            return False

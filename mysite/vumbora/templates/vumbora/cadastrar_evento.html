@@ -13,34 +13,9 @@
 <body>
 
   <h2>Cadastro de Evento</h2>
-  <form method="post" action="{% url 'vumbora:cadastrar_evento.html' %}">
-    {{ form.as_p }}
+  <form method="post" action="{% url 'vumbora:cadastrar_evento' %}" enctype="multipart/form-data">
     {% csrf_token %}
-  <form action="{% url 'vumbora:cadastrar_evento' %}" method="post" enctype="multipart/form-data">
-    <label for="titulo">Nome do Evento:</label>
-    <input type="text" id="titulo" name="titulo" required>
-
-    <label for="categoria">Categoria do Evento:</label>
-    <select id="categoria" name="categoria">
-      <option value="Show">Show</option>
-      <option value="Teatro">Teatro</option>
-      <option value="Exposição">Exposição</option>
-      <option value="Gastronomia">Gastronomia</option>
-      <option value="Festa">Festa</option>
-    </select>
-
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" required>
-
-    <label for="data">Data do Evento:</label>
-    <input type="date" id="data" name="data" required>
-
-    <label for="imagens">Imagens do Evento:</label>
-    <input type="file" id="imagens" name="imagens[]" accept="image/*" multiple>
-
-    <label for="descricao">Descrição:</label>
-    <textarea id="descricao" name="descricao" rows="4" required></textarea>
-
+    {{ form.as_p }}
     <button type="submit">Cadastrar Evento</button>
   </form>
 

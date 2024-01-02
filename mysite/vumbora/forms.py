@@ -34,5 +34,5 @@ class UsuarioForm(UserCreationForm):
 class EventoCadastro(forms.ModelForm):
     class Meta:
         model = Evento
-        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero', 'usuario']
+        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero']
 
