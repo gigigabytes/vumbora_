@@ -123,11 +123,11 @@ def cadastrar_perfil(request):
              
 def cadastrar_evento(request):
     if request.method == 'POST':
-        form = EventoCadastroForm(request.POST, request.FILES)
+        form = EventoCadastro(request.POST, request.FILES)
         if form.is_valid():
 
-            return redirect('pagina_detalhes_evento')
+            return redirect('index')
     else:
-        form = EventoCadastroForm()
+        form = EventoCadastro()
 
-    return render(request, 'cadastrar_evento.html', {'form': form})
+    return render(request, 'index', {'form': form})
