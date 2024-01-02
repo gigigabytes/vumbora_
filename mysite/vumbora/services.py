@@ -2,6 +2,11 @@ from .forms import UsuarioForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login 
 from .models import Usuario
+from .forms import EventoCadastro
+from django.shortcuts import redirect, render
+from django.contrib import messages
+from .models import Evento
+
 
 class CadastrarPerfilService:
     def cadastrar_perfil(self, request):
@@ -40,3 +45,18 @@ class LogarService:
             else:
                 messages.error(request,f'Invalid username or password') 
                 return False
+
+class CadastrarEventoService:
+    def cadastrar_evento(self, request):
+        form = EventoCadastro(request.POST, request.FILES)
+        if form.is_valid():
+            evento = form.save(commit=False)
+
+            evento.usuario = request.user 
+            evento.save()
+
+            messages.success(request, 'Evento cadastrado com sucesso.')
+            return redirect('index', evento_id=evento.id)
+        else:
+            messages.error(request, 'Erro ao cadastrar evento. Verifique os campos.')
+            return render(request, 'cadastrar_evento.html', {'form': form})
