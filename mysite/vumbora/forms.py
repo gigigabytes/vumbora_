@@ -1,5 +1,5 @@
 from django import forms
-from .models import Evento, Usuario
+from .models import Evento, Usuario, Local
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -34,10 +34,12 @@ class UsuarioForm(UserCreationForm):
 class EventoCadastro(forms.ModelForm):
     class Meta:
         model = Evento
-        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero']
+        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero',]
         widgets = {
             'datahora': forms.DateTimeInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
         }
         labels = {
             'datahora': 'Data e Hora do Evento',
+            'descricao': 'Descrição',
         }
+  

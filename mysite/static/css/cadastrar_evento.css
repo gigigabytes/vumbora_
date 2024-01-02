@@ -1,0 +1,54 @@
+/* static/vumbora/styles.css */
+
+body {
+    background-color: ##FFF; /* cor de laranja */
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Removendo margens padrão do corpo da página */
+}
+
+.container {
+    width: 50%; /* ajuste conforme necessário */
+    margin: auto;
+    margin-top: 50px; /* ajuste conforme necessário */
+    background-color: #FFF; /* cor de fundo do formulário */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Asteristico';
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    text-align: center; /* Centralizando o texto dos rótulos */
+    display: block; /* Para garantir que cada rótulo fique em uma linha separada */
+    margin-bottom: 5px; /* Espaçamento inferior entre os rótulos */
+}
+
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    width: 90%; /* Preenchendo a largura do container */
+    
+}
+
+
+/* Estilo adicional para a seção "Eventos do Usuário" */
+hr {
+    margin-top: 30px;
+}
+
+/* Adicione estilos conforme necessário para a seção "Eventos do Usuário" */
