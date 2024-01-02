@@ -1,57 +1,224 @@
-* {
-    margin: 0 auto;
-    box-sizing: border-box;
-    
+/* _______________________________ */
+
+.button-filtro {
+    background-color: #FFA14A;
+    border: none;
+    border-radius: 50px;
+    font-family: 'DM Sans', sans-serif;
+    height: 35px;
+    width: 120px;
 }
 
-.arteevento {
+.button-filtro:hover {
+    background-color: #FFA14A;
+    color: white;
+    transition: 0.5s;
+}
+
+.campolistagem {
+    display: flex;
+    margin-left: 30%;
+    margin-top: 20%;
+}
+
+.card {
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    margin: 10px;
+    width: 310px;
+}
+
+.card img {
+    border: 0;
+    border-radius: 6px 6px 0 0;
+    height: 20vh;
+    max-height: fit-content;
+    padding-bottom: 2px;
     width: 100%;
-    height: 100;
 }
 
-.carrossel {
-    width: 100vh;
+.content {
     display: flex;
-    justify-content: center;
-}
-.campolistagem{
-    display: flex;
-    justify-content: center;
-}
-header, section, .filtragem{
     margin-top: 10px;
 }
-.msgbusca{
-    display: flex;
+
+.data {
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    right: 70px;
+}
+
+.descricao {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
     justify-content: center;
-    margin-top: 55px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
+.filtragem select {
+    background-color: #F2F4FF;
+    border: none;
+    border-radius: 50px;
+    color: black;
+    font-family: 'DM Sans', sans-serif;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.lista-eventos-pai{
-    width: 20%px;
-    margin-top: 50px;
+.informacoes {
+    color: gray;
+    font-family: 'DM Sans', sans-serif;
+    font-size: small;
+    justify-content: center;
 }
+
 .lista-eventos-pai {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    gap: 10px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 20px;
+}
+
+.local-horario {
     display: flex;
     justify-content: center;
 }
 
- .lista-eventos-filho {
-    width: 23%;
-    border: 3px solid #f30909;
-    box-shadow: 0 0 10px red;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
+.msgbusca {
+    color: gray;
+    display: flex;
+    justify-content: left;
+    margin-top: 55px;
+    padding-bottom: 20px;
+    padding-left: 50px;
 }
-.arteevento {
-    width: 100%;
+
+.pag-titulo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/* _______________________________ */
+
+.ver-mais {
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-color: black;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-style: bold;
+    height: 46px;
+    justify-content: center;
+    margin-top: 7px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    width: 120px;
+}
+
+.ver-mais:hover {
+    background-color: orange;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .artista {
+        position: relative;
+        bottom: 10px;
+    }
+
+    .card img {
+        height: 25vh;
+        width: 100%;
+    }
+
+    .lista-eventos-pai {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .local-horario {
+        padding-top: 5px;
+    }
+
+    .ver-mais {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .artista {
+        position: relative;
+        bottom: 10px;
+    }
+
+    .card img {
+        height: 25vh;
+        width: 100%;
+    }
+
+    .lista-eventos-pai {
+        display: grid;
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .local-horario {
+        padding-top: 5px;
+    }
+
+    .ver-mais {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 620px) {
+    .artista {
+        position: relative;
+        bottom: 10px;
+    }
+
+    .card img {
+        height: 25vh;
+        width: 100%;
+    }
+
+    .lista-eventos-pai {
+        display: grid;
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 25%;
+    }
+
+    .local-data {
+        padding-top: 10px;
+    }
+
+    .titulo {
+        margin-top: 10px;
+    }
+
+    .ver-mais {
+        margin-top: 12px;
+    }
 }
