@@ -35,4 +35,9 @@ class EventoCadastro(forms.ModelForm):
     class Meta:
         model = Evento
         fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero']
-
+        widgets = {
+            'datahora': forms.DateTimeInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+        }
+        labels = {
+            'datahora': 'Data e Hora do Evento',
+        }
