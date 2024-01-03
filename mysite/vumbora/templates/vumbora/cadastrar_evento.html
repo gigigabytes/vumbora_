@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+{% include 'vumbora/header.html' %}
+
+<link rel="stylesheet" href="{% static 'css/cadastrar_evento.css' %}">
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Evento</title>
+</head>
+<body>
+
+  <h2>Cadastro de Evento</h2>
+  <form method="post" action="{% url 'vumbora:cadastrar_evento' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Cadastrar Evento</button>
+  </form>
+
+  <hr>
+
+</body>
+</html>

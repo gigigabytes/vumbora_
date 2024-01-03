@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
 from .models import Evento, Usuario,Avaliacao
-from .forms import AvaliacaoForm
+from .forms import AvaliacaoForm, UsuarioForm, UserCreationForm, EventoCadastro, LoginForm
 from datetime import datetime, timedelta
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .services import CadastrarPerfilService, LogarService, CadastrarEventoService
+from django.views import View
 from django.urls import reverse
 
 ### View INDEX
@@ -27,7 +30,6 @@ def details(request, evento_id):
     }
     return render(request, 'vumbora/detail.html', context)
 
-
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
 
@@ -35,15 +37,14 @@ class PesquisaEventoForm(forms.Form):
 #############
 def pesquisar_eventos(request):
     eventos = Evento.objects.all()
-
+    form = PesquisaEventoForm()
+    
     if request.method == 'POST':
         form = PesquisaEventoForm(request.POST)
         if form.is_valid():
             termo_pesquisa = form.cleaned_data.get('termo_pesquisa', '')
             eventos = Evento.objects.filter(nome__icontains=termo_pesquisa)
-    else:
-        form = PesquisaEventoForm()
-
+    
     return render(request, 'vumbora/resultado_pesquisa.html', {'form': form, 'eventos': eventos})
 
        
@@ -84,3 +85,47 @@ def eventos_na_semana(request):
 
     # Renderiza o template com os eventos
     return render(request, 'vumbora/lista_eventos_semana.html', {'eventos_semana': eventos_semana, 'mensagem_sem_eventos': mensagem_sem_eventos})
+
+### View Login
+####################
+
+def logar(request):
+    if request.method == 'GET':
+        form = LoginForm()
+        return render(request, 'vumbora/login.html', { 'form': form})
+    elif request.method == 'POST':
+        ls = LogarService()
+        if ls.Logar(request):
+            return redirect(reverse('vumbora:index'))
+        else: 
+            form = LoginForm()
+            return render(request,'vumbora/login.html',{'form': form})
+            
+### View Cadastrar Perfil
+###################        
+    
+def cadastrar_perfil(request):
+    if request.method == 'GET':
+        form = UsuarioForm()
+        return render(request, 'vumbora/cadastro_perfil.html', { 'form': form})
+    if request.method == 'POST':
+        cps = CadastrarPerfilService()
+        if cps.cadastrar_perfil(request):
+            return redirect(reverse('vumbora:index'))
+        else:
+            form = UsuarioForm(request.POST)
+            return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
+
+
+### View Cadastrar Evento
+###################
+             
+def cadastrar_evento(request):
+    if request.method == 'POST':
+        service = CadastrarEventoService()
+        deu_certo = service.cadastrar_evento(request)
+        if deu_certo:
+            return redirect('vumbora:index')
+    else:
+        form = EventoCadastro()
+    return render(request, 'vumbora/cadastrar_evento.html', {'form': form})

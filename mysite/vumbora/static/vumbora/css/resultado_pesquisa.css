@@ -1,32 +1,19 @@
-/* _______________________________ */
-
-.button-filtro {
-    background-color: #FFA14A;
-    border: none;
-    border-radius: 50px;
-    font-family: 'DM Sans', sans-serif;
-    height: 35px;
-    width: 120px;
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.button-filtro:hover {
-    background-color: #FFA14A;
-    color: white;
-    transition: 0.5s;
-}
-
-.campolistagem {
-    display: flex;
-    margin-left: 30%;
-    margin-top: 20%;
+.all {
+    display: inline-flex;
+    justify-content: space-between;
+    padding-top: 20vh;
 }
 
 .card {
     align-items: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
     height: 320px;
     margin: 10px;
     width: 310px;
@@ -36,7 +23,6 @@
     border: 0;
     border-radius: 6px 6px 0 0;
     height: 20vh;
-    max-height: fit-content;
     padding-bottom: 2px;
     width: 100%;
 }
@@ -49,7 +35,7 @@
 .data {
     font-family: 'DM Sans', sans-serif;
     position: relative;
-    right: 70px;
+    right: 13vh;
 }
 
 .descricao {
@@ -64,19 +50,6 @@
     word-wrap: break-word;
 }
 
-.filtragem select {
-    background-color: #F2F4FF;
-    border: none;
-    border-radius: 50px;
-    color: black;
-    font-family: 'DM Sans', sans-serif;
-    height: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .informacoes {
     color: gray;
     font-family: 'DM Sans', sans-serif;
@@ -84,26 +57,9 @@
     justify-content: center;
 }
 
-.lista-eventos-pai {
-    display: grid;
-    gap: 10px;
-    grid-row-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 20px;
-}
-
 .local-horario {
     display: flex;
     justify-content: center;
-}
-
-.msgbusca {
-    color: gray;
-    display: flex;
-    justify-content: left;
-    margin-top: 55px;
-    padding-bottom: 20px;
-    padding-left: 50px;
 }
 
 .pag-titulo {
@@ -111,10 +67,16 @@
     font-size: 30px;
     font-weight: bold;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-/* _______________________________ */
+.titulo {
+    font-family: 'DM Sans', sans-serif, bold;
+    font-size: 20px;
+    font-style: bold;
+    position: relative;
+    right: 20px;
+}
 
 .ver-mais {
     align-items: center;
@@ -141,18 +103,14 @@
     color: white;
 }
 
-@media (max-width: 1200px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
-
+/* @media (max-width: 1200px) {
+   
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -167,17 +125,13 @@
 }
 
 @media (max-width: 900px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
 
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-row-gap: 40px;
         grid-template-columns: repeat(2, 1fr);
@@ -193,17 +147,12 @@
 }
 
 @media (max-width: 620px) {
-    .artista {
-        position: relative;
-        bottom: 10px;
-    }
-
     .card img {
         height: 25vh;
         width: 100%;
     }
 
-    .lista-eventos-pai {
+    .all {
         display: grid;
         grid-row-gap: 40px;
         grid-template-columns: repeat(1, 1fr);
@@ -221,4 +170,4 @@
     .ver-mais {
         margin-top: 12px;
     }
-}
+} */

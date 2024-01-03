@@ -6,80 +6,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'vumbora/css/eventos_semana.css' %}">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
     <title>Eventos Semana</title>
 </head>
 <body>
-    <header>
-        <div class = "container" style="display: flex;" >
-            <h1> VUMBORA? </h1>
-            <div id="pesquisa-barra-de-navegação">
-                <form action="#">
-                <input type="text" name="search" placeholder="Busque eventos...">
-                <button type="submit"></button>
-                </form>
-            </div>
-            <div id="filtro-localização-barra">
-                <button>Localização</button>
-            </div>
-            <div id="Meus-eventos-barra">
-                <button>Meus Eventos</button>
-            </div>
-            <div id="Login-barra">
-                <button>Login</button>
-            </div>
-            <div id="opções-barra">
-                <button></button>
-            </div>
-        </div>
-    </header>
-    <section >
-        <img class="carrossel" src="/media/images/carrossel.png" alt="">
-    </section>
+    
+    <div>
+        {% include 'vumbora/header.html' %}
+    </div>
+    
     <div class="filtragem">
 
         <form class="campolistagem" method="get" action="{% url 'vumbora:lista_eventos_semana' %}">
-            <h2 class="textoform"> Escolha uma opção de busca: </h2>
-            <div>
-                <label for="filtro_semana">Busque:</label>
-                <select name="filtro_semana" id="filtro_semana">
-                    <option value="evento_list" >Todos os Eventos</option>
-                    <option value="eventos_semana">Eventos da Semana</option>
-                </select>
+            <div class = "filtros-pesquisa">
+                <label for="tipo_evento"></label>
+            <select id="tipo">
+                <option value="1">Tipo</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+            
+            <label for="zona_evento"></label>
+            <select id="tipo">
+                <option value="1">Zona</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+            
+            <label for="valor_evento"></label>
+            <select id="tipo">
+                <option value="1">Valor</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+
+            <label for="data_evento"></label>
+            <select name="filtro_semana" id="filtro_semana">
+                <option>Data</option>
+                <option value="evento_list" >Todos os Eventos</option>
+                <option value="eventos_semana">Eventos da Semana</option>
+            </select>
+            <input class="button-filtro" type="submit" value="Buscar">    
             </div>
-            <input type="submit" value="Filtrar">
         </form>
-        
+    </div>    
+    <div class = "resultado-filtragem">   
         {% if eventos_semana and request.GET.filtro_semana == 'eventos_semana' %}
-            <h2 class="msgbusca"> Eventos Encontrados </h2>
+            <h2 class="msgbusca"> Eventos da semana </h2>
             <div class="lista-eventos-pai">
                 {% for evento in eventos_semana %}
-                    <div class="lista-eventos-filho">
-                        {% if evento.arte %}
-                            <img class="arteevento" src="{{ evento.arte.url }}" alt=""><br>
-                        {% endif %}
-                        <strong>Nome:</strong> {{ evento.nome }}<br>
-                        <strong>Horário:</strong> {{ evento.datahora }}<br>
-                        <a href="{% url 'vumbora:details' evento.id %}">Ver mais</a>
+                <div class="all">
+                    <div class="card">
+                        {% if evento.arte%}
+                        <div class="img">
+                            <img src="{{evento.arte.url}}">
+                        </div>
+                        {%else%}
+                        <div class="img">
+                            <img src="https://v0.betalabs.cloud/ecommerce/lifebike/img/unavailable.jpg">
+                        </div>
+                        {%endif%}
+                        <div class="content">
+                            <p class="data">{{evento.datahora|date:"M"}} <br><strong>{{evento.datahora.day}}</strong></p>
+                            <p class="titulo">{{evento.nome}}</p>
+                        </div>
+                        <p class="descricao">{% if evento.descricao|length > 30 %} {{ evento.descricao|slice:":30" }}...{% else %}{{ evento.descricao }}{% endif %}</p>
+                        <div class ="informacoes">
+                            <p class="local-horario">{{evento.local}} - {{evento.datahora.hour}}:{{evento.datahora.minute|stringformat:"02d"}}</p>
+                            <p class="ingresso" > 
+                                {% if evento.valor == 0 %} Evento gratuito 
+                                {% else %} Ingressos a partir de R${{evento.valor}} Reais 
+                                {% endif %}</p>
+                        </div>
+                        <a href="{% url 'vumbora:details' evento.id %}"  rel="noopener noreferrer" class="ver-mais">Ver Mais</a>
                     </div>
+                </div>
                 {% endfor %}
             </div>
         {% else %}
         <h2 class="msgbusca"> {{ mensagem_sem_eventos }} </h2>
         {% endif %}
-
-        <!-- <div class="events-container-duplicate">
-            {% for eventos_semana in eventos_semana %}
-                <div class="event-item-duplicate">
-                    {% if eventos_semana.arte %}
-                        <img class="arte" src="{{ eventos_semana.arte.url }}" alt=""><br>
-                    {% endif %}
-                    <strong>Nome:</strong> {{ eventos_semana.nome }}<br>
-                    <strong>Horário:</strong> {{ eventos_semana.datahora }}<br>
-                    <a href="{% url 'vumbora:details' eventos_semana.id %}"> Ver mais</a>
-                </div>
-            {% endfor %}
-        </div> -->
     </div>
 </body>
 </html>
