@@ -17,3 +17,5 @@
 | :-----------------: | :-----------------: | 
 | 2 - Usuário deixa de preencher um campo ou preenche de forma que não corresponde aos parâmetros estabelecidos necessários(sendo eles: os dois campos de senha não serem iguais; identidade ter um número que ainda já foi cadastrado) e clica em registrar. | 3 - Sistema retorna a mensagem que valor não é aceitável e diz qual foi o problema encontrado.|
 4 - Fluxo retorna para o passo 2 do fluxo principal. | 
+
+![Page Principal](Diagrama_de_Sequência_Cadastrar_Perfil.png) - Diagrama de Sequência

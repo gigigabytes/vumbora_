@@ -22,3 +22,6 @@
 | 0 - Usuário escolhe o evento que deseja detalhar. | 1 - Sistema reconhece que o evento em questão não existe e exibe apenas a mensagem que o que está sendo procurado não existe e um botão para retornar a página inicial. |
 
 Observação: essa deve ser a imagem padrão a ser utilizado em todos os casos que o usuário não fornecer as imagens de sua escolha. ![Page Principal](padrao.jpg)
+
+![Page Principal](DiagramaDetalhes.png) - Diagrama de Classes
+![Page Principal](Diagrama_de_Sequência_Detalhar_Evento.png) - Diagrama de Sequência
