@@ -24,8 +24,10 @@
 4.1 - Usuário clica na botão enviar avaliação sem ter dado uma quantidade de estrelas.
 ||4.2 - O sistema toma como padrão 5 estrelas e vai para o passo 5 do fluxo principal.|
 
-
-
+# Diagrama de projeto avaliar evento
+![Diagrama de projeto avaliar evento](diagrama.png)
+# Diagrama de sequência avaliar evento
+![Diagrama de sequência avaliar evento](Diagrama_de_Sequência_Avaliar_Evento.png)
 
 <!-- ## Fluxos alternativos I
 ### Usuário opta por deixar comentário na avaliação, após avaliar com estrelas.
