@@ -1,23 +1,23 @@
 // Get start
-const one = document.getElementById('first')
-const two = document.getElementById('second')
-const three = document.getElementById('third')
-const four = document.getElementById('fourth')
-const five = document.getElementById('fifth')
+const one = document.getElementById('first') // uma estrela
+const two = document.getElementById('second') // duas estrelas
+const three = document.getElementById('third') // três estrelas
+const four = document.getElementById('fourth') // quatro estrelas
+const five = document.getElementById('fifth') // cinco estrelas
 
-const form = document.querySelector('form')
-const confirmbox = document.getElementById('confirm-box')
-const csrf = document.getElementsByName('csrfmiddlewaretoken')
-const url = document.body.getAttribute('data-url')
-const comentarioInput = document.getElementById('id_comentario');  // Substitua 'id_do_seu_campo_de_comentario' pelo ID correto
+const form = document.getElementById('f-avaliar') // form roxo
+const confirmbox = document.getElementById('confirm-box') // null?
+const csrf = document.getElementsByName('csrfmiddlewaretoken') // código CSRF
+const url = document.body.getAttribute('data-url') // parte final da URL (endpoint)
+const comentarioInput = document.getElementById('id_comentario');  // campo de texto do comentário
 
 
 const handleStarSelect = (size) =>{
     const children = form.children
-    
+    // for de 0 até 7
     for(let i=0; i < children.length; i++){
         if(i <= size){
-            children[i].classList.add('checked')
+            children[i].classList.add('checked') // adiciona uma classe 'checked'
         }else{
             children[i].classList.remove('checked')
         }

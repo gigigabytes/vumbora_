@@ -5,15 +5,14 @@
   }
 
 #barra{
-    width: 100%;
+    /* width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 20px;*/
     margin-bottom: 40px;
-
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: gray;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
 }
 #procura{
     border: 5px;
