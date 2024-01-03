@@ -1,24 +1,59 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vumbora/css/resultado_pesquisa.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
     <title>Resultados da sua pesquisa</title>
 </head>
 
-<h1>Resultados da Pesquisa</h1>
+<body>
+    {% include 'vumbora/header.html' %}
+    <p class="pag-titulo">
+    <h1>Resultados da Pesquisa</h1>
+    </p> 
 
-<form method="post" action="{% url 'vumbora:pesquisar_eventos' %}">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <button type="submit">Pesquisar</button>
-</form>
-
-{% for evento in eventos %}
-    <h2>{{ evento.nome }}</h2>
-    <!-- <p>{{ evento.descricao }} - {{ evento.local.nome }}</p> -->
-{% endfor %}
-
+    {% if eventos %}
+    {% for evento in eventos %}
+    <div class="all">
+        <div class="card">
+            {% if evento.arte%}
+            <div class="img">
+                <img src="{{evento.arte.url}}">
+            </div>
+            {%else%}
+            <div class="img">
+                <img src="https://v0.betalabs.cloud/ecommerce/lifebike/img/unavailable.jpg">
+            </div>
+            {%endif%}
+            <div class="content">
+                <p class="data">{{evento.datahora|date:"M"}} <br><strong>{{evento.datahora.day}}</strong></p>
+                <p class="titulo">{{evento.nome}}</p>
+            </div>
+            <p class="descricao">
+                {% if evento.descricao|length > 30 %} 
+                {{ evento.descricao|slice:":30" }}...{% else %}
+                {{evento.descricao}}
+                {% endif %}</p>
+            <div class="informacoes">
+                <p class="local-horario">{{evento.local}} -
+                    {{evento.datahora.hour}}:{{evento.datahora.minute|stringformat:"02d"}}</p>
+                <p class="ingresso">
+                    {% if evento.valor == 0 %} Evento gratuito
+                    {% else %} Ingressos a partir de R${{evento.valor}} Reais
+                    {% endif %}</p>
+            </div>
+            <a href="{% url 'vumbora:details' evento.id %}" rel="noopener noreferrer" class="ver-mais">Ver Mais</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="pag-titulo">
+    <h2>Nenhum evento encontrado</h2>
+    </p>
+    {% endif %}
 </body>
+
 </html>
