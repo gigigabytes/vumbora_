@@ -24,4 +24,6 @@
 Observação: essa deve ser a imagem padrão a ser utilizado em todos os casos que o usuário não fornecer as imagens de sua escolha. ![Page Principal](padrao.jpg)
 
 ![Page Principal](DiagramaDetalhes.png) - Diagrama de Classes
-![Page Principal](Diagrama_de_Sequência_Detalhar_Evento.png) - Diagrama de Sequência
+
+## Diagrama de Sequência
+![Page Principal](Diagrama_de_Sequência_Detalhar_Evento.png) 
