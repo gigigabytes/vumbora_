@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django import forms
-from .models import Evento, Avaliacao
-from .forms import AvaliacaoForm, PesquisaEventoForm, LoginForm, UsuarioForm
+from .models import Evento, Usuario,Avaliacao
+from .forms import AvaliacaoForm, UsuarioForm, UserCreationForm, EventoCadastro, LoginForm
 from datetime import datetime, timedelta
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .services import CadastrarPerfilService, LogarService
+from .services import CadastrarPerfilService, LogarService, CadastrarEventoService
 from django.views import View
 from django.urls import reverse
 
@@ -115,3 +115,17 @@ def cadastrar_perfil(request):
         else:
             form = UsuarioForm(request.POST)
             return render(request, 'vumbora/cadastro_perfil.html', {'form': form}) 
+
+
+### View Cadastrar Evento
+###################
+             
+def cadastrar_evento(request):
+    if request.method == 'POST':
+        service = CadastrarEventoService()
+        deu_certo = service.cadastrar_evento(request)
+        if deu_certo:
+            return redirect('vumbora:index')
+    else:
+        form = EventoCadastro()
+    return render(request, 'vumbora/cadastrar_evento.html', {'form': form})

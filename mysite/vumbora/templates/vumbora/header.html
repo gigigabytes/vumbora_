@@ -18,12 +18,12 @@
             </form>
         </div>
         <div id="filtro-localizacao-barra">
-            <button class="btn btn-primary rounded-pill" id="botao-loc">Localização</button>
+            <button class="btn btn-primary rounded-pill" style="width: fit-content; id="botao-loc">Localização</button>
         </div>
         <div id="barra-evento">
-            <a href="#" id="icone-evento"></a>
+            <a href="{% url 'vumbora:cadastrar_evento' %}" id="icone-evento"></a>
             <div id="meus-eventos-barra">
-                <a href="#" style="text-decoration: none; color:red "> Meus Eventos</a>
+                <a href="{% url 'vumbora:cadastrar_evento' %}" style="text-decoration: none; color:red "> Meus Eventos</a>
             </div>
         </div>
         <div id="usuario-barra">

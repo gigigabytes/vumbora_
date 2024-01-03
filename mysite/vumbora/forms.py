@@ -1,7 +1,9 @@
 from django import forms
-from django.contrib.auth.models import User
+from .models import Evento, Usuario, Local
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import Usuario,Avaliacao
+
 
 class PesquisaEventoForm(forms.Form):
     termo_pesquisa = forms.CharField(label=' Eveno', max_length=100)
@@ -19,7 +21,6 @@ class LoginForm(forms.Form):
     username = forms.CharField(max_length=65)
     password = forms.CharField(max_length=65, widget=forms.PasswordInput)
     
-
 class UsuarioForm(UserCreationForm):
     tipo = forms.ChoiceField(choices=[
         ('F', 'Física'),
@@ -32,3 +33,16 @@ class UsuarioForm(UserCreationForm):
         model=User
         fields = ['username','email','password1','password2','nome', 'tipo', 'identidade', 'foto']
 
+class EventoCadastro(forms.ModelForm):
+    class Meta:
+        model = Evento
+        fields = ['nome', 'descricao', 'datahora', 'valor', 'local', 'arte', 'genero',]
+        widgets = {
+            'datahora': forms.DateTimeInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+        }
+        labels = {
+            'datahora': 'Data e Hora do Evento',
+            'descricao': 'Descrição',
+            'genero': 'Gênero do Evento'
+        }
+  
