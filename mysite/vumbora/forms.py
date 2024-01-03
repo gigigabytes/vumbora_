@@ -2,10 +2,12 @@ from django import forms
 from .models import Evento, Usuario, Local
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Usuario,Avaliacao
+
 
 class PesquisaEventoForm(forms.Form):
-    termo_pesquisa = forms.CharField(label='Pesquisar Evento', max_length=100)
-from .models import Avaliacao
+    termo_pesquisa = forms.CharField(label=' Eveno', max_length=100)
+
 
 class AvaliacaoForm(forms.ModelForm):
     class Meta:

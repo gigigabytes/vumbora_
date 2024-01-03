@@ -19,4 +19,9 @@
 | |2.1 - Sistema informa que não existem eventos condizentes com os critérios fornecidos manualmente e retorna para a página anterior. |  
 | 2.2 - Usuário recebe mensagem de erro para fornecer novos parâmetros de texto condizentes com a pesquisa do evento que ele deseja buscar.| 2.3 - Sistema retorna para o passo 2 do fluxo principal. |
 
+
+## Diagrama de Classes de Projeto
 ![Diagrama de Classes de Projeto: Pesquisar Eventos](cduPesquisarEvento.png)
+
+## Diagrama de Sequência
+![Diagrama de Sequência: Pesquisar Eventos](Diagrama_de_Sequencia_Pesquisar_Evento.png)

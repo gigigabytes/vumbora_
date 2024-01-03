@@ -37,15 +37,14 @@ class PesquisaEventoForm(forms.Form):
 #############
 def pesquisar_eventos(request):
     eventos = Evento.objects.all()
-
+    form = PesquisaEventoForm()
+    
     if request.method == 'POST':
         form = PesquisaEventoForm(request.POST)
         if form.is_valid():
             termo_pesquisa = form.cleaned_data.get('termo_pesquisa', '')
             eventos = Evento.objects.filter(nome__icontains=termo_pesquisa)
-    else:
-        form = PesquisaEventoForm()
-
+    
     return render(request, 'vumbora/resultado_pesquisa.html', {'form': form, 'eventos': eventos})
 
        
