@@ -4,11 +4,14 @@
          local(Asteristico) url(/mysite/static/vumbora/css/Asteristico.ttf);
   }
 #barra{
-    width: 100%;
+    /* width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+    margin: 20px;*/
     margin-bottom: 40px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
 }
 #procura{
     border: 5px;

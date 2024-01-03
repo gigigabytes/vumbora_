@@ -84,15 +84,13 @@ h1{
     background-color: #8581F6;
     gap: 2vw;
     margin-left: 2vw;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 30vw;
     height: 10vw;
     margin-top: 3vw;
     align-items: center;
     justify-content: center;
-    
-    
-}
+} 
 
 #coment-text{
     font-size: 20px;
@@ -127,20 +125,20 @@ h1{
     justify-content: center;
     align-items: center;
     background-color: #8581F6;
-    border-radius: 50px;
+    border-radius: 100px;
     width: 60vw;
     height: 15vw;
 
 }
 
-.form-comentario{
-    border-radius: 50px;
+ .form-comentario{
+    border-radius: 20px;
     width: 90%;
     height: 55%;
     margin-top: 1.5vw;
     resize: none;
     position: relative;
-    left: 10%;
+    left: 10%; 
     
    
 }
