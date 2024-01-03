@@ -33,3 +33,6 @@
 | 4 - O Usuário clica no botão para concluir a exclusão do evento. | 3 - Sistema mensagem de sucessão relativa a exclusão do evento. |
 
 
+## Diagrama de sequência
+
+![Diagrama de sequência](Diagrama_de_Sequencia_Gerenciar_Evento.png)

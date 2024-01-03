@@ -1,4 +1,4 @@
-﻿# CDU005. Listar Eventos da Semana
+﻿# CDU006. Listar Eventos da Semana
 
 - **Ator principal**: Usuário Cadastrado, Produtora, Usuário Comum
 - **Atores secundários**: ...	 
