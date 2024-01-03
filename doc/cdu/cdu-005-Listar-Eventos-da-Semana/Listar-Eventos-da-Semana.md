@@ -15,3 +15,11 @@
 | Ações do ator | Ações do sistema |
 | :-----------------: | :-----------------: | 
 | 1 - Usuário escolhe a opção para listar os eventos da semana sendo que não existem eventos para aquela semana | 2 -  Sistema exibe uma a mensagem dizendo que não há eventos cadasrados para aquela semana.
+
+
+
+
+
+
+## Diagrama de Sequência: Listar Eventos da Semana
+![Diagrama de sequência](listar_eventos_semana.png)
