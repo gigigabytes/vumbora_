@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 50%; /* ajuste conforme necessário */
+    width: 70%; /* ajuste conforme necessário */
     margin: auto;
     margin-top: 50px; /* ajuste conforme necessário */
     background-color: #FFF; /* cor de fundo do formulário */
@@ -35,16 +35,20 @@ label {
 }
 
 
-input, select, button {
+input, select {
     margin-bottom: 10px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    width: 90%; /* Preenchendo a largura do container */
-    
+    width: 100%; /* Preenchendo a largura do container */
 }
+ 
+button {
+    width:10%;
+    border-radius: 10px;
 
+}
 
 /* Estilo adicional para a seção "Eventos do Usuário" */
 hr {

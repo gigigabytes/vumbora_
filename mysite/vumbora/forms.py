@@ -41,5 +41,6 @@ class EventoCadastro(forms.ModelForm):
         labels = {
             'datahora': 'Data e Hora do Evento',
             'descricao': 'Descrição',
+            'genero': 'Gênero do Evento'
         }
   
