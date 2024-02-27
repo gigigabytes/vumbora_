@@ -52,8 +52,8 @@ Nossos desenvolvedores utilizam as seguintes tecnologias para criar e manter a "
 
 - **Python:** Linguagem de programação usada no desenvolvimento web devido à sua versatilidade e rico ecossistema de frameworks.
 - **Django:** Framework web Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção.
-- [Futuramente] **Django Rest Framework** Um kit de ferramentas poderoso e flexível para construir APIs da Web.
-- [Futuramente] **ReactJS** Uma biblioteca JavaScript robusta usada no desenvolvimento dinâmico de aplicativos da Web.
+- [Futuramente] **Django Rest Framework:** Um kit de ferramentas poderoso e flexível para construir APIs da Web.
+- [Futuramente] **ReactJS:** Uma biblioteca JavaScript robusta usada no desenvolvimento dinâmico de aplicativos da Web.
 
 # Documentação
 
@@ -61,6 +61,6 @@ Nossos desenvolvedores utilizam as seguintes tecnologias para criar e manter a "
 
 # Manual da Desenvolvedor
 
-Obrigado por considerar contribuir com o **Vumbora?**. Suas contribuições são valiosas para tornar nossa plataforma melhor para todos os usuários. Por favor, siga os passos abaixo para participar do nosso projeto .
+Obrigado por considerar contribuir com o **"Vumbora?"**. Suas contribuições são valiosas para tornar nossa plataforma melhor para todos os usuários. Por favor, siga os passos abaixo para participar do nosso projeto .
 
 [Orientações para os desenvolvedores do projeto](doc/guia-ds/guia.md)
