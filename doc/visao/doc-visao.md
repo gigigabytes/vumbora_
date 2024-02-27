@@ -7,7 +7,7 @@
 | 27/09/2023| 1.0    | Primeira versão da descrição                      | Giovanna, Leonardo, Matheus e Rafael |
 | 08/10/2023| 1.1    | Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais. | Rafael |
 | 13/11/2023| 1.2    | Ajustes gerais de compatibilidade                 | Giovanna, Leonardo, Matheus e Rafael |
-| 26/02/2024| 1.2    | Ajustes básicos na descrição dos rerquisitos funcionais | Leonardo |
+| 26/02/2024| 1.3    | Ajustes básicos na descrição dos requisitos funcionais | Leonardo |
 
 ## 1. Projeto: VUMBORA?
 
