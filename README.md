@@ -1,7 +1,5 @@
 # Vumbora?
 
-<img src="logo.png" width="400" height="400" />
-
 "Vumbora?" é uma plataforma que facilita o acesso a agenda cultural da cidade Natal/RN, buscando oferecer a centralização e divulgação do que está acontecendo em Natal em diferentes nichos de entretenimento potiguar. 
 
 ## 👥 Equipe e Contatos
@@ -10,10 +8,10 @@ Nossa equipe está empenhada em tornar a "Vumbora?" uma experiência incrível p
 
 <table style>
   <tr>
-    <td align="center"><a href="https://github.com/#">
-        <img src="https://avatars.githubusercontent.com/#" width="100px;" alt="Autor 1"/>
+    <td align="center"><a href="https://github.com/alicelimas">
+        <img src="https://avatars.githubusercontent.com/alicelimas" width="100px;" alt="Autor 1"/>
         <br />
-        <a href="https://github.com/#"><b>Alice...</b></a>
+        <a href="https://github.com/alicelimas"><b>Alice Lima</b></a>
     </td>
         <td align="center"><a href="https://github.com/usuariodebruno">
         <img src="https://avatars.githubusercontent.com/usuariodebruno" width="100px;" alt="Autor 2"/>
