@@ -41,8 +41,9 @@ Nossa equipe está empenhada em tornar a "Vumbora?" uma experiência incrível p
 
 ## 📅 Horário de Reuniões
 
-- **Segundas-feiras, Terças-feiras e Quintas-feiras:** Alinhamento com o orientador no campus.
-- **Segundas-feiras, Sextas-feiras e Sábados:** Reunião da equipe no Whatsapp.
+- **Dia:** Quartas-feira
+- **Horário:** 14h30 às 16h00
+- **Local:** Laboratório 13 - DIATINF
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 
