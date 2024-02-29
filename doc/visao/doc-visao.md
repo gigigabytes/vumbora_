@@ -1,4 +1,4 @@
-## **Histórico da Revisão**
+## **Histórico da revisão**
 
 |**Data**|**Versão**|**Descrição**|**Autor**|
 | :-: | :-: | :-: | :-: |
@@ -45,7 +45,7 @@ O sistema filtrará os eventos por sua data, tema, valor e pelos eventos que ir�
 
 Os usuários classificarão os eventos e as pessoas que os produziram para que exista um tipo de feedback para os outros usuários e as pessoas responsáveis pelos eventos. Dessa maneira, a plataforma irá se diferenciar em relação às outras pelo foco na divulgação dos eventos pertinentes para cada pessoa além de possibilitar uma historização dos pontos fortes e fracos de cada evento e pessoa que os produz. 
 
-## 8. **Requisitos FUNCIONAIS**
+## 8. **Requisitos funcionais**
 
 |**Código**|**Nome**|**Descrição**|
 | :- | :- | :- |
@@ -59,14 +59,14 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 |*F08*|*Comentar evento*|*O usuário poderá comentar na página de um evento para deixar suas impressões e também tirar dúvidas sobre ele.* |
 |*F09*|*Gerenciar perfis*|*Realização de cadastro, consulta e atualização de dados do perfil do usuário ou exclusão da conta.*|
 
-## 9. **Requisitos NÃO-FUNCIONAIS**
+## 9. **Requisitos não-funcionais**
 
 |**Código**|**Nome**|**Descrição**|**Categoria**|**Classificação**<br>|
 | :- | :- | :- | :-: | :-: |
 |*RNF01*|*Design Responsivo*|*O sistema deve se adaptar a diferentes tamanhos de tela.*|*Usabilidade*|*Obrigatório*|
 |*RNF02*|*Facilidade de uso*|*O sistema deve ser intuitivo e fácil de utilizar*|*Usabilidade*|*Obrigatório*|
 
-### *Matriz de Rastreabilidade:*
+### *Matriz de rastreabilidade:*
 
 | Caso de Uso / Requisito | F01 | F02 | F03 | F04 | F05 | F06 | F07 | F08 | F09 |
 |------------------------|----|----|----|----|----|----|----|----|----|
