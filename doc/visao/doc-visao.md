@@ -80,5 +80,3 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 | Manter Perfil          |    |    |   |    |    |    |    |    | X  |
 | Favoritar Evento       |    |    |    |    |    |  X  |    |    |    |
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
-
-![Foto da Matriz de Rastreabilidade ](/doc/visao/Matriz-Rastreabilidade(Vumbora).png)
