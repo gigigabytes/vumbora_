@@ -23,7 +23,7 @@
 |**Nome**|**Descrição**|**Responsabilidade**|
 | - | - | - |
 |Usuário|<p>Pessoas físicas cadastradas na plataforma</p><p></p>|<p>Cadastrar eventos, marcar presença, favoritar eventos e avaliar os eventos que participou.</p><p></p>|
-|Público geral|Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. |Procurar informações sobre eventos.|
+|Visitante|Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. |Procurar informações sobre eventos.|
 |Produtora|Pessoas jurídicas cadastradas na plataforma.|Cadastrar eventos da produtora e responder comentários dos outros usuários em relação aos seus eventos.|
 
 4. **Descrição do ambiente dos usuários:**
@@ -53,15 +53,20 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 
 |**Código**|**Nome**|**Descrição**|
 | :- | :- | :- |
-|*F01*|*Gerenciar eventos*|*Seria criar ou editar as informações dos eventos fazendo a atualização ou exclusão do evento, caso necessário.* |
-|*F02*|*Listar eventos da semana*|*O usuário poderá visualizar os eventos cadastrados que vão ocorrer naquela semana.*|
-|*F03*|*Visualizar eventos cadastrados/favoritados*|*O usuário poderá ver seus eventos cadastrados.*|
-|*F04*|*Pesquisa dos eventos* |*Os usuários irão fazer pesquisas com intenção de encontrar eventos de acordo com sua preferência.*|
-|*F05*|*Detalhar evento*|*O usuário poderá ver todos os detalhes públicos do evento.* |
-|*F06*|*Favoritar evento* |*O usuário poderá favoritar um evento para ficar salvo para ele e/ou outros usuários que ele irá comparecer.*|
-|*F07*|*Avaliar evento*|*O usuário poderá avaliar eventos.* |
-|*F08*|*Comentar evento*|*O usuário poderá comentar na página de um evento para deixar suas impressões e também tirar dúvidas sobre ele.* |
-|*F09*|*Gerenciar perfis*|*Realização de cadastro, consulta e atualização de dados do perfil do usuário ou exclusão da conta.*|
+|*F01*|*Criação de eventos*|*Possibilita que um produtor crie um evento, informando os dados necessários sobre o evento a ser cadastrado.* |
+|*F02*|*Edição de eventos*|*Permite que um criador de evento modifique alguma informação sobre o evento cadastrado por ele.* |
+|*F03*|*Exclusão de eventos*|*Permite que um produtor apague o evento criado por ele próprio.* |
+|*F04*|*Listagem de eventos da semana*|*Os usuários podem visualizar os eventos cadastrados que ocorrerão naquela semana.*|
+|*F05*|*Visualização de eventos cadastrados*|*O usuário cadastrado na aplicação poderá ver seus eventos cadastrados.*|
+|*F06*|*Visualização de eventos favoritados*|*O usuário cadastrado na aplicação poderá ver os eventos favoritados por ele.*|
+|*F07*|*Pesquisa de eventos* |*Permite que os usuários pesquisem eventos, informando o título ou palavras relacionadas ao evento buscado.*|
+|*F08*|*Detalhamento de evento*|*O usuário poderá visualizar todos os detalhes públicos do evento selecionado.* |
+|*F09*|*Predileção de evento* |*O usuário cadastrado poderá "favoritar" um evento de seu interesse.*|
+|*F10*|*Avaliação de evento*|*O usuário cadastrado poderá classificar e avaliar eventos.* |
+|*F11*|*Comentário de evento*|*O usuário cadastrado poderá comentar na página de um evento, a fim de deixar suas impressões e avaliação e também tirar dúvidas sobre sua realização.* |
+|*F12*|*Cadastro de perfil*|*Permite ao visitante realizar o seu cadastro no sistema.*|
+|*F13*|*Atualização de perfil*|*O usuário cadastrado pode modificar e atualizar algum dado sobre a sua conta.*|
+|*F14*|*Exclusão de perfil*|*O usuário cadastrado pode excluir a sua conta no sistema.*|
 
 
 9. **Requisitos NÃO-FUNCIONAIS**
