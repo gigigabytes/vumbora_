@@ -52,7 +52,7 @@ Nossos desenvolvedores utilizam as seguintes tecnologias para criar e manter a "
 - **Python:** Linguagem de programação usada no desenvolvimento web devido à sua versatilidade e rico ecossistema de frameworks.
 - **Django:** Framework web Python de alto nível que permite o rápido desenvolvimento de sites seguros e de fácil manutenção.
 - [Futuramente] **Django Rest Framework:** Um kit de ferramentas poderoso e flexível para construir APIs da Web.
-- [Futuramente] **ReactJS:** Uma biblioteca JavaScript robusta usada no desenvolvimento dinâmico de aplicativos da Web.
+- [Futuramente] **Angular:** um poderoso framework JavaScript desenvolvido pelo Google para criar aplicativos da web dinâmicos e single-page (SPAs).
 
 # Documentação
 
