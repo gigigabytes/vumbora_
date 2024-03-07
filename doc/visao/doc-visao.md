@@ -77,8 +77,8 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 
 | Caso de Uso / Requisito | F01 | F02 | F03 | F04 | F05 | F06 | F07 | F08 | F09 |
 |------------------------|----|----|----|----|----|----|----|----|----|
-| Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
 | Listar Eventos(Semana) |    |  X  |    |    |   |    |    |    |    |
+| Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
 | Pesquisar Eventos      |    |    |    | X  |    |    |    |    |    |
 | Cadastrar perfil       |    |    |    |    |    |    |    |    | X  |
 | Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |

@@ -54,7 +54,14 @@ class Genero(models.Model):
     class Meta:
         verbose_name_plural = "Gêneros"
     def __str__(self):
-        return self.genero
+        choices_dict = {
+            'E': 'Exposição',
+            'F': 'Festa',
+            'G': 'Gastronomia',
+            'S': 'Show',
+            'T': 'Teatro',     
+        }
+        return choices_dict.get(self.genero, '')
     
 class Evento(models.Model):
     nome = models.CharField(max_length=200)
