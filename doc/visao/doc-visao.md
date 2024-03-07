@@ -9,6 +9,7 @@
 |08/10/2023|1\.1|Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais. |Rafael |
 |13/11/2023|1\.2|Ajustes gerais de compatibilidade|Giovanna, Leonardo, Matheus e Rafael|
 
+
 1. **Projeto**: *VUMBORA?*
 2. **Descrição do problema:**
 
@@ -94,3 +95,16 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
 
 ![Foto da Matriz de Rastreabilidade ](/doc/visao/Matriz-Rastreabilidade(Vumbora).png)
+
+
+**Glossário**
+|**Termo**| **Significado**
+| :-:      |  :-:        |
+|**Vumbora?** | Nome do projeto |
+|**Usuário** | Pessoa física cadastrada na plataforma, responsável por cadastrar eventos, favoritar, eventos e avaliar os eventos que participou.|
+| **Visitante** | Qualquer pessoa interessada em buscar eventos na cidade de Natal.|
+|**Produtora** | Pessoa jurídica cadastrada na plataforma, responsável por cadastrar eventos da produtora e responder comentários em relação aos seus eventos.|
+|**Plataforma** | Ambiente virtual onde ocorre a interação dos usuários e a divulgação dos eventos.|
+|**Requisitos funcionais** | Conjunto de funcionalidades que o sistema deve possuir para atender às necessidades dos usuários.|
+|**Requisitos não funcionais**| Características que o sistema deve possuir em termos de usabilidade.|
+|**Matriz de rastreabilidade**| Tabela que relaciona os casos de uso do sistema com os requisitos funcionais, mostrando quais requisitos são cobertos por cada caso de uso.|
