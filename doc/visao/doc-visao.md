@@ -100,11 +100,8 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 **Glossário**
 |**Termo**| **Significado**
 | :-:      |  :-:        |
-|**Vumbora?** | Nome do projeto |
 |**Usuário** | Pessoa física cadastrada na plataforma, responsável por cadastrar eventos, favoritar, eventos e avaliar os eventos que participou.|
 | **Visitante** | Qualquer pessoa interessada em buscar eventos na cidade de Natal.|
 |**Produtora** | Pessoa jurídica cadastrada na plataforma, responsável por cadastrar eventos da produtora e responder comentários em relação aos seus eventos.|
 |**Plataforma** | Ambiente virtual onde ocorre a interação dos usuários e a divulgação dos eventos.|
-|**Requisitos funcionais** | Conjunto de funcionalidades que o sistema deve possuir para atender às necessidades dos usuários.|
-|**Requisitos não funcionais**| Características que o sistema deve possuir em termos de usabilidade.|
 |**Matriz de rastreabilidade**| Tabela que relaciona os casos de uso do sistema com os requisitos funcionais, mostrando quais requisitos são cobertos por cada caso de uso.|
