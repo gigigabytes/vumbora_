@@ -100,8 +100,8 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 **Glossário**
 |**Termo**| **Significado**
 | :-:      |  :-:        |
-|**Usuário** | Pessoa física cadastrada na plataforma, responsável por cadastrar eventos, favoritar, eventos e avaliar os eventos que participou.|
-| **Visitante** | Qualquer pessoa interessada em buscar eventos na cidade de Natal.|
+|**Divulgador** | Pessoa física cadastrada na plataforma, responsável por cadastrar eventos, favoritar, eventos e avaliar os eventos que participou.|
+|**Evento**| Acontecimento (festa, show, espetáculo teatral, evento cultural ou gastronômico) organizado por pessoa fisíca ou juridíca.|
 |**Produtora** | Pessoa jurídica cadastrada na plataforma, responsável por cadastrar eventos da produtora e responder comentários em relação aos seus eventos.|
 |**Plataforma** | Ambiente virtual onde ocorre a interação dos usuários e a divulgação dos eventos.|
-|**Matriz de rastreabilidade**| Tabela que relaciona os casos de uso do sistema com os requisitos funcionais, mostrando quais requisitos são cobertos por cada caso de uso.|
+| **Visitante** | Qualquer pessoa interessada em buscar eventos na cidade de Natal.|
