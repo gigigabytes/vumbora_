@@ -78,14 +78,14 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 | Caso de Uso / Requisito | F01 | F02 | F03 | F04 | F05 | F06 | F07 | F08 | F09 |
 |------------------------|----|----|----|----|----|----|----|----|----|
 | Listar Eventos(Semana) |    |  X  |    |    |   |    |    |    |    |
-| Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
 | Pesquisar Eventos      |    |    |    | X  |    |    |    |    |    |
-| Cadastrar perfil       |    |    |    |    |    |    |    |    | X  |
-| Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |
-| Visualizar Eventos Cadastrados/Favoritados | | | X |  | | | |   |   |
-| Comentar Evento        |    |    |    |    |    |    |    | X   |    |
-| Manter Perfil          |    |    |   |    |    |    |    |    | X  |
+| Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
 | Favoritar Evento       |    |    |    |    |    |  X  |    |    |    |
+| Visualizar Eventos Cadastrados/Favoritados | | | X |  | | | |   |   |
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
+| Comentar Evento        |    |    |    |    |    |    |    | X   |    |
+| Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |
+| Manter Perfil          |    |    |   |    |    |    |    |    | X  |
+| Cadastrar perfil       |    |    |    |    |    |    |    |    | X  |
 
-![Foto da Matriz de Rastreabilidade ](/doc/visao/Matriz-Rastreabilidade(Vumbora).png)
+
