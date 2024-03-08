@@ -9,6 +9,7 @@
 |08/10/2023|1\.1|Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais. |Rafael |
 |13/11/2023|1\.2|Ajustes gerais de compatibilidade|Giovanna, Leonardo, Matheus e Rafael|
 
+
 1. **Projeto**: *VUMBORA?*
 2. **Descrição do problema:**
 
@@ -94,3 +95,13 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
 
 ![Foto da Matriz de Rastreabilidade ](/doc/visao/Matriz-Rastreabilidade(Vumbora).png)
+
+
+**Glossário**
+|**Termo**| **Significado**
+| :-:      |  :-:        |
+|**Divulgador** | Pessoa física cadastrada na plataforma, responsável por cadastrar eventos, favoritar, eventos e avaliar os eventos que participou.|
+|**Evento**| Acontecimento (festa, show, espetáculo teatral, evento cultural ou gastronômico) organizado por pessoa fisíca ou juridíca.|
+|**Produtora** | Pessoa jurídica cadastrada na plataforma, responsável por cadastrar eventos da produtora e responder comentários em relação aos seus eventos.|
+|**Plataforma** | Ambiente virtual onde ocorre a interação dos usuários e a divulgação dos eventos.|
+| **Visitante** | Qualquer pessoa interessada em buscar eventos na cidade de Natal.|
