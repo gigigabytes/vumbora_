@@ -84,9 +84,9 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 |------------------------|----|----|----|----|----|----|----|----|----|
 | Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |
 | Listar Eventos(Semana) |    |  X  |    |    |   |    |    |    |    |
+| Visualizar Eventos Cadastrados/Favoritados | | | X |  | | | |   |   |
 | Pesquisar Eventos      |    |    |    | X  |    |    |    |    |    |
 | Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
-| Visualizar Eventos Cadastrados/Favoritados | | | X |  | | | |   |   |
 | Favoritar Evento       |    |    |    |    |    |  X  |    |    |    |
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
 | Comentar Evento        |    |    |    |    |    |    |    | X   |    |
