@@ -82,14 +82,14 @@ Os usuários classificarão os eventos e as pessoas que os produziram para que e
 
 | Caso de Uso / Requisito | F01 | F02 | F03 | F04 | F05 | F06 | F07 | F08 | F09 |
 |------------------------|----|----|----|----|----|----|----|----|----|
+| Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |
 | Listar Eventos(Semana) |    |  X  |    |    |   |    |    |    |    |
 | Pesquisar Eventos      |    |    |    | X  |    |    |    |    |    |
 | Detalhar Evento        |    |    |    |    | X  |    |   |    |   |
-| Favoritar Evento       |    |    |    |    |    |  X  |    |    |    |
 | Visualizar Eventos Cadastrados/Favoritados | | | X |  | | | |   |   |
+| Favoritar Evento       |    |    |    |    |    |  X  |    |    |    |
 | Avaliar Evento         |    |   |   |    |   |   | X   |    |    |
 | Comentar Evento        |    |    |    |    |    |    |    | X   |    |
-| Gerenciar Evento       | X  |    |    |    |    |    |    |    |    |
 | Manter Perfil          |    |    |   |    |    |    |    |    | X  |
 | Cadastrar perfil       |    |    |    |    |    |    |    |    | X  |
 
