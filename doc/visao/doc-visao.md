@@ -5,6 +5,7 @@
 |27/09/2023|1\.0|Primeira versão da descrição |Giovanna, Leonardo, Matheus e Rafael |
 |08/10/2023|1\.1|Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais. |Rafael |
 |13/11/2023|1\.2|Ajustes gerais de compatibilidade|Giovanna, Leonardo, Matheus e Rafael|
+|13/03/2024|1\.2|Ajustes na matriz de rastreabilidade e de termos |Leonardo, Bruno|
 
 ## 1. **Projeto**: *VUMBORA?*
 
@@ -20,8 +21,8 @@
 
 |**Nome**|**Descrição**|**Responsabilidade**|
 | - | - | - |
-|Usuário|<p>Pessoas físicas cadastradas na plataforma</p><p></p>|<p>Cadastrar eventos, marcar presença, favoritar eventos e avaliar os eventos que participou.</p><p></p>|
-|Público geral|Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. |Procurar informações sobre eventos.|
+|Colaborador de Eventos|<p>Pessoas físicas cadastradas na plataforma</p><p></p>|<p>Cadastrar eventos, marcar presença, favoritar eventos e avaliar os eventos que participou.</p><p></p>|
+|Visitante|Todas as pessoas interessadas na busca dos eventos natalenses e em divulgar os seus eventos. |Procurar informações sobre eventos.|
 |Produtora|Pessoas jurídicas cadastradas na plataforma.|Cadastrar eventos da produtora e responder comentários dos outros usuários em relação aos seus eventos.|
 
 ## 4. **Descrição do ambiente dos usuários:**
