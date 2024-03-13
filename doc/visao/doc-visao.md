@@ -5,7 +5,7 @@
 |27/09/2023|1\.0|Primeira versão da descrição |Giovanna, Leonardo, Matheus e Rafael |
 |08/10/2023|1\.1|Unificação do tipo de usuário, ajustes nos requisitos, adição da agenda de eventos e ajustes gerais. |Rafael |
 |13/11/2023|1\.2|Ajustes gerais de compatibilidade|Giovanna, Leonardo, Matheus e Rafael|
-|13/03/2024|1\.2|Ajustes na matriz de rastreabilidade e de termos |Leonardo, Bruno|
+|13/03/2024|1\.3|Ajustes na matriz de rastreabilidade e de termos |Leonardo, Bruno|
 
 ## 1. **Projeto**: *VUMBORA?*
 
